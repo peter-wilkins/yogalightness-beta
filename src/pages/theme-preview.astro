@@ -1,0 +1,69 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+---
+
+<BaseLayout title="Theme Preview" description="Three quick visual directions for Yoga Lightness Beta.">
+  <section class="page-title">
+    <p class="eyebrow">Theme choice</p>
+    <h1>Three directions</h1>
+    <p class="lede">Pick the direction that feels closest. The site can keep one, combine parts, or ask for another three.</p>
+  </section>
+
+  <section class="theme-preview-grid" aria-label="Theme prototypes">
+    <article class="theme-preview-card theme-field-guide">
+      <p class="theme-label">Prototype 1</p>
+      <h2>Field Guide</h2>
+      <p>Practical, grounded, and useful. Good for teaching, nature, repair, field notes, and public-interest work.</p>
+      <div class="theme-swatch-row">
+        <span></span><span></span><span></span>
+      </div>
+      <a href={`${base}blog/`}>Read posts</a>
+    </article>
+
+    <article class="theme-preview-card theme-editorial">
+      <p class="theme-label">Prototype 2</p>
+      <h2>Editorial</h2>
+      <p>More magazine-like. Good for public essays, stories, campaigning, opinion, and visual identity.</p>
+      <div class="theme-swatch-row">
+        <span></span><span></span><span></span>
+      </div>
+      <a href={`${base}blog/`}>Read posts</a>
+    </article>
+
+    <article class="theme-preview-card theme-notebook">
+      <p class="theme-label">Prototype 3</p>
+      <h2>Notebook</h2>
+      <p>Quiet, direct, and low-friction. Good for personal notes, project logs, research, and frequent writing.</p>
+      <div class="theme-swatch-row">
+        <span></span><span></span><span></span>
+      </div>
+      <a href={`${base}blog/`}>Read posts</a>
+    </article>
+  </section>
+
+  <section class="section">
+    <h2>Asset Direction</h2>
+    <p>
+      After choosing a theme, generate an asset plan with <code>scripts/plan_blog_assets.py</code>.
+      The first pass should propose search queries and licence-safe sources before downloading or publishing images.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Source Image Test</h2>
+    <div class="asset-grid">
+      <figure>
+        <img src={`${base}source-assets/light.png`} alt="" />
+        <figcaption>Soft light motif</figcaption>
+      </figure>
+      <figure>
+        <img src={`${base}source-assets/chakra.jpg`} alt="" />
+        <figcaption>Chakra article asset</figcaption>
+      </figure>
+    </div>
+  </section>
+</BaseLayout>
