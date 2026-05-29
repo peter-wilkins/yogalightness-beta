@@ -9,7 +9,7 @@ interface Props {
 
 const {
   title = "Yoga Lightness Beta",
-  description = "A public beta rebuild of Yoga Lightness for Jane to review.",
+  description = "A clean theme shell for Jane's new Yoga Lightness copy.",
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL.endsWith("/")
@@ -31,7 +31,6 @@ const base = import.meta.env.BASE_URL.endsWith("/")
         <a class="brand" href={base}>Yoga Lightness Beta</a>
         <div class="nav-links">
           <a href={`${base}blog/`}>Posts</a>
-          <a href={`${base}source-map/`}>Source Map</a>
           <a href={`${base}theme-preview/`}>Themes</a>
         </div>
       </nav>
@@ -41,8 +40,7 @@ const base = import.meta.env.BASE_URL.endsWith("/")
     </main>
     <footer class="site-footer">
       <p>
-        Public beta rebuild from <a href="https://www.yogalightness.com/">yogalightness.com</a>.
-        Full content migration should wait for Jane's review.
+        New-copy beta shell. Old website content has been removed from this build.
       </p>
     </footer>
   </body>

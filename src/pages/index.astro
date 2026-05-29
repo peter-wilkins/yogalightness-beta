@@ -6,49 +6,49 @@ const base = import.meta.env.BASE_URL.endsWith("/")
   : `${import.meta.env.BASE_URL}/`;
 ---
 
-<BaseLayout title="Yoga Lightness Beta" description="A public beta rebuild of Yoga Lightness for Jane to review.">
+<BaseLayout title="Yoga Lightness Beta" description="A clean theme shell for Jane's new Yoga Lightness copy.">
   <section class="hero">
     <div class="hero-copy">
-      <p class="eyebrow">Public Review Build</p>
+      <p class="eyebrow">New Copy Coming</p>
       <h1>Yoga Lightness</h1>
       <p class="lede">
-        A light, modern review site for Jane's yoga teaching, reflective practice,
-        and existing writing at Yoga Lightness.
+        A calm public shell for Jane's new writing, classes, and reflective yoga
+        work. Old website content has been removed from this beta.
       </p>
       <div class="button-row">
-        <a class="button" href={`${base}blog/`}>Read posts</a>
-        <a class="button secondary" href={`${base}source-map/`}>See source map</a>
+        <a class="button" href={`${base}theme-preview/`}>View themes</a>
+        <a class="button secondary" href={`${base}blog/`}>Copy notes</a>
       </div>
     </div>
-    <figure class="hero-media">
-      <img src={`${base}source-assets/profile-2024.jpg`} alt="Yoga Lightness profile portrait" />
-    </figure>
+    <div class="hero-panel" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </section>
 
   <section class="section">
     <h2>What This Is</h2>
     <p>
-      This is a fast public beta, built from the public Yoga Lightness sitemap and feed.
-      It preserves the important paths and gives Jane a live place to review structure,
-      tone, and next edits before any full migration happens.
+      This is no longer a migration preview. It is a clean staging site for new
+      Yoga Lightness copy. The immediate job is to find a visual direction that
+      suits Jane's new text, then build around that rather than around the old
+      site.
     </p>
   </section>
 
-  <section class="feature-grid" aria-label="Main source areas">
+  <section class="feature-grid" aria-label="Draft site shape">
     <article>
-      <img src={`${base}source-assets/light.png`} alt="" />
-      <h2>Reflective Practice</h2>
-      <p>Clear routes into Hidden Language, Kundalini, Divine Light, and Yasodhara Yoga.</p>
+      <h2>Home</h2>
+      <p>A short, warm entry point that says who Jane helps and what the work feels like.</p>
     </article>
     <article>
-      <img src={`${base}source-assets/meditation.jpg`} alt="" />
-      <h2>Classes And Workshops</h2>
-      <p>A cleaner home for current classes, workshops, Reiki, and contact details.</p>
+      <h2>Classes</h2>
+      <p>A practical page for current classes, workshops, contact, and booking next steps.</p>
     </article>
     <article>
-      <img src={`${base}source-assets/radha.jpg`} alt="" />
-      <h2>Lineage</h2>
-      <p>Space for Yasodhara Yoga context and the lineage material already on the site.</p>
+      <h2>About</h2>
+      <p>A personal page shaped around Jane's new copy rather than inherited wording.</p>
     </article>
   </section>
 
@@ -56,14 +56,13 @@ const base = import.meta.env.BASE_URL.endsWith("/")
     <div>
       <h2>Review Notes</h2>
       <p>
-        The beta deliberately uses summaries and source links rather than a full content
-        mirror. Once Jane confirms ownership and preferred wording, the site can migrate
-        full article bodies and simplify the old Jekyll site into this structure.
+        The safest beta is now copy-first. Once Jane sends the new text, the site
+        can grow from actual language instead of placeholder assumptions.
       </p>
     </div>
     <div class="note-panel">
-      <p class="eyebrow">Found In Source</p>
-      <p>2 articles, 3 standing pages, RSS feed, sitemap, and 7 reusable image assets.</p>
+      <p class="eyebrow">Current State</p>
+      <p>Old scrape removed. Waiting for Jane's new copy and theme direction.</p>
     </div>
   </section>
 </BaseLayout>

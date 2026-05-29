@@ -1,30 +1,27 @@
 ---
-title: "Yoga Lightness Beta Review Notes"
-tldr: "This beta rebuild turns the current public site into a clearer reviewable structure without committing to a full content migration yet."
-description: "Review notes for the Yoga Lightness beta rebuild."
+title: "New Copy Holding Page"
+tldr: "Jane wants the beta to use fresh copy, so the old-site scrape has been removed while the new writing is prepared."
+description: "Holding note for the Yoga Lightness beta."
 date: "2026-05-29"
 draft: false
-tags: ["beta", "review"]
+tags: ["beta", "new-copy"]
 ---
 
-This beta is a quick public review build for Yoga Lightness.
+Jane has decided not to reuse the old website content.
 
-It has been built from the public sitemap, RSS feed, and visible pages at
-[yogalightness.com](https://www.yogalightness.com/). The first goal is not to
-replace Jane's existing site in one jump. The first goal is to make the shape of
-the future site easy to inspect.
+This beta is now a clean shell for new copy, new theme exploration, and a calmer
+public shape. The next real content should come from Jane's fresh text rather
+than from a scrape of the previous site.
 
-## What The Beta Preserves
+## What This Means
 
-| Source Area | Beta Treatment |
+| Decision | Result |
 | --- | --- |
-| Blog articles | Summarised with links to the original articles. |
-| About, classes, Yasodhara pages | Listed in the source map for review. |
-| Images | Imported into the beta so layout and tone can be judged visually. |
-| Full article bodies | Deferred until Jane confirms the intended migration path. |
+| No old website copy | Removed from the public beta. |
+| New copy coming | Treat this site as a clean staging area. |
+| Theme still open | Use the theme page to explore direction. |
 
 ## Next Useful Edit
 
-Jane can review the homepage, source map, and post list, then decide whether the
-site should become a faithful migration, a lighter brochure site, or a cleaner
-blog-first rebuild.
+Paste Jane's new copy into the repo when it arrives, then shape the homepage,
+about page, and classes page around that text.

@@ -57,6 +57,5 @@ publish.
 
 ## Source Policy
 
-The beta imports public image assets and publishes summaries with links back to
-the original Yoga Lightness pages. Do not migrate full article bodies until Jane
-confirms the desired public migration path.
+Jane has said not to reuse the old website. Keep this beta as a clean staging
+site for new copy and theme exploration.
