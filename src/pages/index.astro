@@ -6,63 +6,121 @@ const base = import.meta.env.BASE_URL.endsWith("/")
   : `${import.meta.env.BASE_URL}/`;
 ---
 
-<BaseLayout title="Yoga Lightness Beta" description="A clean theme shell for Jane's new Yoga Lightness copy.">
+<BaseLayout>
   <section class="hero">
     <div class="hero-copy">
-      <p class="eyebrow">New Copy Coming</p>
+      <p class="eyebrow">Held space in North Norfolk</p>
       <h1>Yoga Lightness</h1>
       <p class="lede">
-        A calm public shell for Jane's new writing, classes, and reflective yoga
-        work. Old website content has been removed from this beta.
+        One-to-one contemplative support, spacious personal retreats, and a tiny
+        solo meditation cottage for people who need time to breathe, listen, and
+        return to themselves.
       </p>
       <div class="button-row">
-        <a class="button" href={`${base}theme-preview/`}>View themes</a>
-        <a class="button secondary" href={`${base}blog/`}>Copy notes</a>
+        <a class="button" href={`${base}work-with-jane/`}>Work with Jane</a>
+        <a class="button secondary" href={`${base}meditation-cottage/`}>View the cottage</a>
       </div>
     </div>
-    <div class="hero-panel" aria-hidden="true">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+    <figure class="hero-media">
+      <img
+        src={`${base}assets/retreat-cottage-placeholder.webp`}
+        alt="A quiet garden retreat cottage in soft morning light"
+      />
+      <figcaption>Visual direction placeholder</figcaption>
+    </figure>
   </section>
 
-  <section class="section">
-    <h2>What This Is</h2>
+  <section class="statement" aria-label="Core promise">
     <p>
-      This is no longer a migration preview. It is a clean staging site for new
-      Yoga Lightness copy. The immediate job is to find a visual direction that
-      suits Jane's new text, then build around that rather than around the old
-      site.
+      Sometimes what we need most is not advice, diagnosis, or a programme to
+      follow. It is simply to be heard deeply, without judgement, by someone who
+      knows how to hold space.
     </p>
   </section>
 
-  <section class="feature-grid" aria-label="Draft site shape">
+  <section class="section section-narrow">
+    <p class="eyebrow">With JaneCatherine Aldiss</p>
+    <h2>Presence without performance</h2>
+    <p>
+      Jane brings more than forty years of lived practice across yoga,
+      meditation, Shiatsu, Reiki, dreamwork, Non Violent Communication, deep
+      listening, and compassionate companionship. Her work is personal,
+      unhurried, and grounded in the real texture of being human.
+    </p>
+  </section>
+
+  <section class="feature-grid" aria-label="Ways to work with Jane">
     <article>
-      <h2>Home</h2>
-      <p>A short, warm entry point that says who Jane helps and what the work feels like.</p>
+      <p class="small-label">One-to-one</p>
+      <h3>Wellbeing and clarity</h3>
+      <p>
+        Spacious online or in-person sessions for stress, overwhelm, grief,
+        transition, or simply needing somewhere honest to speak and be heard.
+      </p>
     </article>
     <article>
-      <h2>Classes</h2>
-      <p>A practical page for current classes, workshops, contact, and booking next steps.</p>
+      <p class="small-label">Immersive</p>
+      <h3>Personal retreats</h3>
+      <p>
+        A private weekend in Aylsham with meditation, nourishing food, Reiki,
+        reflective support, walks, and plenty of unstructured time.
+      </p>
     </article>
     <article>
-      <h2>About</h2>
-      <p>A personal page shaped around Jane's new copy rather than inherited wording.</p>
+      <p class="small-label">Solo practice</p>
+      <h3>Meditation cottage</h3>
+      <p>
+        Yurlod Kurpa is a tiny, self-catering practice cabin near Aylsham for
+        solo meditation retreat stays of up to 28 nights.
+      </p>
     </article>
   </section>
 
-  <section class="section split">
-    <div>
-      <h2>Review Notes</h2>
+  <section class="retreat-feature">
+    <div class="soft-panel">
+      <p class="eyebrow">The personal retreat</p>
+      <h2>A weekend shaped around spaciousness</h2>
       <p>
-        The safest beta is now copy-first. Once Jane sends the new text, the site
-        can grow from actual language instead of placeholder assumptions.
+        One guest at a time. A few gentle anchor points create rhythm, while most
+        of the weekend remains yours: walking, resting, journaling, sleeping, or
+        doing absolutely nothing.
       </p>
+      <a class="button" href={`${base}personal-retreats/`}>Explore personal retreats</a>
+    </div>
+    <figure class="retreat-image">
+      <img
+        src={`${base}assets/held-space-placeholder.webp`}
+        alt="A calm retreat room with a meditation cushion and soft natural light"
+      />
+      <figcaption>Visual direction placeholder</figcaption>
+    </figure>
+  </section>
+
+  <section class="split">
+    <div>
+      <p class="eyebrow">The meditation cottage</p>
+      <h2>Tiny, private, and intentionally simple</h2>
+      <p>
+        Yurlod Kurpa is Jane's personal practice cabin, now opened to solo
+        meditation practitioners. It is small by design: a contained, quiet,
+        self-catering place for sitting, simplifying, and being with practice.
+      </p>
+      <a class="button secondary" href={`${base}meditation-cottage/`}>See cottage details</a>
     </div>
     <div class="note-panel">
-      <p class="eyebrow">Current State</p>
-      <p>Old scrape removed. Waiting for Jane's new copy and theme direction.</p>
+      <p class="small-label">Practical</p>
+      <p>Solo guests only. Minimum 2 nights, maximum 28 nights.</p>
+      <p>No WiFi, no TV, and limited mobile signal at the top of the garden.</p>
+      <p>Near Itteringham, Blickling Hall, Aylsham, and the North Norfolk coast.</p>
     </div>
+  </section>
+
+  <section class="contact-band" id="contact">
+    <div>
+      <p class="eyebrow">Begin gently</p>
+      <h2>A free 20-minute introductory call is available</h2>
+      <p>No preparation needed. Just come as you are.</p>
+    </div>
+    <a class="button" href="mailto:janealdiss@gmail.com">Email Jane</a>
   </section>
 </BaseLayout>

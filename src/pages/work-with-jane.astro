@@ -1,0 +1,109 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+---
+
+<BaseLayout
+  title="Work with Jane | Yoga Lightness"
+  description="One-to-one wellbeing, clarity, transition, dreamwork, and compassionate companionship with Jane Aldiss."
+>
+  <section class="page-title section-narrow">
+    <p class="eyebrow">Work with Jane</p>
+    <h1>Skilled, compassionate companionship</h1>
+    <p class="lede">
+      One-to-one support for people navigating the deeper challenges of being
+      human. This is not therapy. It is spacious, grounded, contemplative work
+      shaped around what you actually need.
+    </p>
+  </section>
+
+  <section class="offer-grid" aria-label="Sessions and support">
+    <article>
+      <h3>Wellbeing and clarity sessions</h3>
+      <p>
+        A spacious, unhurried hour to be heard and to gain clarity. Deep
+        listening, gentle reflective questioning, NVC-based support, and
+        meditation or breath-based grounding.
+      </p>
+    </article>
+    <article>
+      <h3>Life transition support</h3>
+      <p>
+        For career shifts, relationship endings, bereavement, illness, burnout,
+        or the quiet crisis that does not have a name but is very real.
+      </p>
+    </article>
+    <article>
+      <h3>End of life companionship</h3>
+      <p>
+        Unhurried, skilled support for people in their last year of life and for
+        the loved ones walking alongside them.
+      </p>
+    </article>
+    <article>
+      <h3>Dreamwork sessions</h3>
+      <p>
+        One-to-one exploration of symbols, patterns, and insights from the
+        dreaming mind. No dream is too small or too strange to be worth hearing.
+      </p>
+    </article>
+  </section>
+
+  <section class="split">
+    <div>
+      <p class="eyebrow">Who this is for</p>
+      <h2>When you need space, not fixing</h2>
+      <ul class="list-clean">
+        <li>Burnout, overwhelm, grief, loss, or sustained stress.</li>
+        <li>A life transition that needs time and gentle attention.</li>
+        <li>Illness recovery, end-of-life reflection, or supporting someone close.</li>
+        <li>A desire for support from an elder with genuine lived wisdom.</li>
+        <li>A wish to rest deeply without performance, pressure, or homework.</li>
+      </ul>
+    </div>
+    <div class="note-panel">
+      <p class="small-label">A note on scope</p>
+      <p>
+        This work sits within contemplative coaching and mindful companionship.
+        It is not therapy, counselling, or clinical mental health support. If
+        urgent support is needed, Jane will help you find the right resources.
+      </p>
+    </div>
+  </section>
+
+  <section class="retreat-feature">
+    <figure class="retreat-image">
+      <img
+        src={`${base}assets/held-space-placeholder.webp`}
+        alt="A peaceful room arranged for meditation and reflection"
+      />
+      <figcaption>Visual direction placeholder</figcaption>
+    </figure>
+    <div>
+      <p class="eyebrow">About Jane</p>
+      <h2>Forty years of practice, carried lightly</h2>
+      <p>
+        Jane's path includes yoga, meditation, Shiatsu, Reiki, dreamwork,
+        developmental movement, deep listening, NVC, Compassionate Companion
+        training, and facilitation of Awakening Dignity. More than any
+        qualification, she brings a life lived in genuine inquiry.
+      </p>
+      <p>
+        Her offering is presence without performance: a calm, safe space where
+        whatever needs to emerge can emerge.
+      </p>
+    </div>
+  </section>
+
+  <section class="contact-band">
+    <div>
+      <p class="eyebrow">Getting started</p>
+      <h2>Book a free introductory call</h2>
+      <p>Available online worldwide and in person in North Norfolk.</p>
+    </div>
+    <a class="button" href="mailto:janealdiss@gmail.com">Email Jane</a>
+  </section>
+</BaseLayout>

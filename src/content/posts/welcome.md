@@ -1,27 +1,27 @@
 ---
-title: "New Copy Holding Page"
-tldr: "Jane wants the beta to use fresh copy, so the old-site scrape has been removed while the new writing is prepared."
-description: "Holding note for the Yoga Lightness beta."
-date: "2026-05-29"
+title: "Public Beta Notes"
+tldr: "The site now uses Jane's new retreat and contemplative support copy, shaped into a calm public beta."
+description: "Current notes for the Yoga Lightness public beta."
+date: "2026-05-30"
 draft: false
 tags: ["beta", "new-copy"]
 ---
 
-Jane has decided not to reuse the old website content.
+This beta has moved from a holding shell into a first public version built from
+Jane's fresh writing.
 
-This beta is now a clean shell for new copy, new theme exploration, and a calmer
-public shape. The next real content should come from Jane's fresh text rather
-than from a scrape of the previous site.
+The current shape focuses on three clear offerings:
 
-## What This Means
+- one-to-one contemplative companionship and clarity sessions
+- spacious personal retreats in North Norfolk
+- Yurlod Kurpa, a tiny solo meditation cottage for self-retreat
 
-| Decision | Result |
-| --- | --- |
-| No old website copy | Removed from the public beta. |
-| New copy coming | Treat this site as a clean staging area. |
-| Theme still open | Use the theme page to explore direction. |
+The visual direction is soft, natural, and reflective. The images are generated
+placeholders for layout and tone while Jane chooses final photography.
 
-## Next Useful Edit
+## Next Useful Edits
 
-Paste Jane's new copy into the repo when it arrives, then shape the homepage,
-about page, and classes page around that text.
+- Replace generated placeholder images with real approved photographs.
+- Confirm contact details, prices, and availability.
+- Decide whether the website should keep the Yoga Lightness name or lead more
+  strongly with Jane's name and Held Space Retreats.

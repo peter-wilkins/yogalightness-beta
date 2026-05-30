@@ -8,8 +8,8 @@ interface Props {
 }
 
 const {
-  title = "Yoga Lightness Beta",
-  description = "A clean theme shell for Jane's new Yoga Lightness copy.",
+  title = "Yoga Lightness | Held space in North Norfolk",
+  description = "One-to-one contemplative support, spacious retreats, and a solo meditation cottage with Jane Aldiss in North Norfolk.",
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL.endsWith("/")
@@ -28,10 +28,12 @@ const base = import.meta.env.BASE_URL.endsWith("/")
   <body>
     <header class="site-header">
       <nav aria-label="Primary">
-        <a class="brand" href={base}>Yoga Lightness Beta</a>
+        <a class="brand" href={base}>Yoga Lightness</a>
         <div class="nav-links">
-          <a href={`${base}blog/`}>Posts</a>
-          <a href={`${base}theme-preview/`}>Themes</a>
+          <a href={`${base}work-with-jane/`}>Work with Jane</a>
+          <a href={`${base}personal-retreats/`}>Personal retreats</a>
+          <a href={`${base}meditation-cottage/`}>Meditation cottage</a>
+          <a href="mailto:janealdiss@gmail.com">Contact</a>
         </div>
       </nav>
     </header>
@@ -40,7 +42,7 @@ const base = import.meta.env.BASE_URL.endsWith("/")
     </main>
     <footer class="site-footer">
       <p>
-        New-copy beta shell. Old website content has been removed from this build.
+        Public beta for Yoga Lightness. Generated placeholder imagery is used for visual direction while final photography is chosen.
       </p>
     </footer>
   </body>

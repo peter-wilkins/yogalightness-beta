@@ -1,0 +1,115 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+---
+
+<BaseLayout
+  title="Personal Retreats | Yoga Lightness"
+  description="Spacious one-to-one weekend retreats with Jane Aldiss in Aylsham, North Norfolk."
+>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">One guest at a time</p>
+      <h1>Spacious weekend retreats</h1>
+      <p class="lede">
+        A private North Norfolk retreat built around rest, reflection, nourishing
+        food, meditation, and the rare permission to step off the treadmill and
+        simply be.
+      </p>
+      <div class="button-row">
+        <a class="button" href="mailto:janealdiss@gmail.com">Enquire</a>
+        <a class="button secondary" href={`${base}work-with-jane/`}>Meet Jane</a>
+      </div>
+    </div>
+    <figure class="hero-media">
+      <img
+        src={`${base}assets/held-space-placeholder.webp`}
+        alt="A light-filled retreat room with soft fabrics and a meditation cushion"
+      />
+      <figcaption>Visual direction placeholder</figcaption>
+    </figure>
+  </section>
+
+  <section class="statement">
+    <p>
+      Rather than packed programming, these retreats are built around spaciousness
+      itself. A few daily anchor points create rhythm. Most of the time remains
+      yours.
+    </p>
+  </section>
+
+  <section class="feature-grid" aria-label="What makes the retreat different">
+    <article>
+      <h3>Complete privacy</h3>
+      <p>One guest at a time, with personalised attention and no group dynamic.</p>
+    </article>
+    <article>
+      <h3>60-70% unstructured time</h3>
+      <p>Walk, rest, read, nap, journal, sit, or do absolutely nothing.</p>
+    </article>
+    <article>
+      <h3>Held by lived wisdom</h3>
+      <p>Jane brings decades of meditation, yoga, healing, and deep listening.</p>
+    </article>
+  </section>
+
+  <section class="split">
+    <div>
+      <p class="eyebrow">Included</p>
+      <h2>A gentle container</h2>
+      <ul class="list-clean">
+        <li>Private ensuite room in a peaceful North Norfolk home.</li>
+        <li>Fabulous vegan, gluten-free meals prepared with care.</li>
+        <li>Morning meditation, with optional evening practice.</li>
+        <li>Optional gentle stretches or movement.</li>
+        <li>Nature walks through countryside, parks, or coastline.</li>
+        <li>Reiki session available on request.</li>
+        <li>Robe, slippers, herbal teas, and space to feel at home.</li>
+      </ul>
+    </div>
+    <div class="price-panel">
+      <p class="small-label">Investment</p>
+      <strong>£650</strong>
+      <p>All-inclusive weekend retreat, Friday 4pm to Sunday 4pm.</p>
+      <p>Location: Aylsham, North Norfolk.</p>
+      <p>Vegan and gluten-free. Other dietary needs accommodated with notice.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="eyebrow">Sample rhythm</p>
+    <h2>A weekend with room to breathe</h2>
+    <div class="schedule">
+      <article>
+        <h3>Friday evening</h3>
+        <p>Arrive, settle in, share a welcome supper, then move into quiet.</p>
+      </article>
+      <article>
+        <h3>Saturday</h3>
+        <p>
+          Morning meditation and breakfast, followed by a spacious day of rest,
+          walking, reading, journaling, Reiki by request, and a shared dinner.
+        </p>
+      </article>
+      <article>
+        <h3>Sunday</h3>
+        <p>
+          Morning meditation, breakfast, free time, light lunch, a short closing
+          reflection, and departure when you are ready.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="contact-band">
+    <div>
+      <p class="eyebrow">Fit matters</p>
+      <h2>A pre-retreat conversation is always offered</h2>
+      <p>Jane will help you decide whether this is the right experience for you.</p>
+    </div>
+    <a class="button" href="mailto:janealdiss@gmail.com">Email Jane</a>
+  </section>
+</BaseLayout>
