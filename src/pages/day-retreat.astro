@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+---
+
+<BaseLayout
+  title="A Day of Meditation and Relaxation | Held Space Retreats"
+  description="A small one-day meditation, gentle yoga, breathing, Yoga Nidra, vegan lunch, and relaxation retreat in Aylsham, Norfolk."
+>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Saturday 4 July, Aylsham</p>
+      <h1>A day of meditation and relaxation</h1>
+      <p class="lede">
+        Step away from the everyday and settle into a full day of meditation,
+        gentle yoga, breathing practices, deep rest, vegan food, and spacious
+        time to simply be.
+      </p>
+      <div class="button-row">
+        <a class="button" href="mailto:janealdiss@gmail.com">Ask about a place</a>
+        <a class="button secondary" href="https://paypal.me/yogalightness">Pay by PayPal</a>
+      </div>
+    </div>
+    <figure class="hero-media">
+      <img
+        src={`${base}assets/held-space-placeholder.webp`}
+        alt="A calm room prepared for a small meditation and relaxation day"
+      />
+      <figcaption>Visual direction placeholder</figcaption>
+    </figure>
+  </section>
+
+  <section class="statement">
+    <p>
+      Open to everyone, from complete beginners to experienced practitioners,
+      including people who prefer chair-based movement.
+    </p>
+  </section>
+
+  <section class="split">
+    <div>
+      <p class="eyebrow">The day</p>
+      <h2>Gentle structure, plenty of space</h2>
+      <div class="schedule">
+        <article>
+          <h3>10:00am - 12:30pm</h3>
+          <p>Morning meditation, gentle yoga stretches, and breathing practices.</p>
+        </article>
+        <article>
+          <h3>12:30pm - 2:00pm</h3>
+          <p>Homemade vegan lunch and spacious time to rest, read, or be quiet.</p>
+        </article>
+        <article>
+          <h3>2:00pm - 3:00pm</h3>
+          <p>Yoga Nidra, a guided deep relaxation practice.</p>
+        </article>
+        <article>
+          <h3>3:00pm - 4:30pm</h3>
+          <p>Afternoon meditation, tea, and closing space.</p>
+        </article>
+      </div>
+    </div>
+    <div class="note-panel">
+      <p class="small-label">Included</p>
+      <ul class="list-clean">
+        <li>Guided meditation and breathing practices.</li>
+        <li>Gentle, accessible yoga for all levels.</li>
+        <li>Yoga Nidra deep relaxation.</li>
+        <li>Homemade vegan lunch and refreshments.</li>
+        <li>Outdoor space to enjoy, weather permitting.</li>
+        <li>A small group, limited to 6 participants.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="split">
+    <div>
+      <p class="eyebrow">Booking</p>
+      <h2>Small, personal, and unhurried</h2>
+      <p>
+        The day is held in a calm private home setting in Aylsham, Norfolk. The
+        exact address is shared with participants after booking.
+      </p>
+      <p>
+        Places are limited so the day can stay personal, quiet, and well
+        supported.
+      </p>
+    </div>
+    <div class="price-panel">
+      <p class="small-label">Investment</p>
+      <strong>&pound;115</strong>
+      <p>Early bird: &pound;105 until 31 May.</p>
+      <p>Full refund up to 14 days before. After that, places are non-refundable but transferable.</p>
+    </div>
+  </section>
+
+  <section class="contact-band">
+    <div>
+      <p class="eyebrow">Reserve a place</p>
+      <h2>Email Jane for bank transfer details or questions</h2>
+      <p>You can also use PayPal if that is simpler.</p>
+    </div>
+    <a class="button" href="mailto:janealdiss@gmail.com">Email Jane</a>
+  </section>
+</BaseLayout>

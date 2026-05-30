@@ -8,8 +8,8 @@ interface Props {
 }
 
 const {
-  title = "Yoga Lightness | Held space in North Norfolk",
-  description = "One-to-one contemplative support, spacious retreats, and a solo meditation cottage with Jane Aldiss in North Norfolk.",
+  title = "Held Space Retreats | North Norfolk",
+  description = "One-to-one contemplative support, spacious retreats, meditation days, and solo practice space with Jane Aldiss in North Norfolk.",
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL.endsWith("/")
@@ -32,6 +32,8 @@ const base = import.meta.env.BASE_URL.endsWith("/")
         <div class="nav-links">
           <a href={`${base}work-with-jane/`}>Work with Jane</a>
           <a href={`${base}personal-retreats/`}>Personal retreats</a>
+          <a href={`${base}day-retreat/`}>Day retreat</a>
+          <a href={`${base}awakening-dignity/`}>Practice group</a>
           <a href={`${base}meditation-cottage/`}>Meditation cottage</a>
           <a href="mailto:janealdiss@gmail.com">Contact</a>
         </div>
@@ -42,7 +44,7 @@ const base = import.meta.env.BASE_URL.endsWith("/")
     </main>
     <footer class="site-footer">
       <p>
-        Public beta for Yoga Lightness. Generated placeholder imagery is used for visual direction while final photography is chosen.
+        Public beta for Held Space Retreats. Generated placeholder imagery is used for visual direction while final photography is chosen.
       </p>
     </footer>
   </body>

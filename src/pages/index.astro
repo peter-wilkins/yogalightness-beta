@@ -10,15 +10,16 @@ const base = import.meta.env.BASE_URL.endsWith("/")
   <section class="hero">
     <div class="hero-copy">
       <p class="eyebrow">Held space in North Norfolk</p>
-      <h1>Yoga Lightness</h1>
+      <h1>Held Space Retreats</h1>
       <p class="lede">
         One-to-one contemplative support, spacious personal retreats, and a tiny
         solo meditation cottage for people who need time to breathe, listen, and
-        return to themselves.
+        return to themselves. Jane also offers meditation days and a free local
+        Awakening Dignity practice group in Aylsham.
       </p>
       <div class="button-row">
-        <a class="button" href={`${base}work-with-jane/`}>Work with Jane</a>
-        <a class="button secondary" href={`${base}meditation-cottage/`}>View the cottage</a>
+        <a class="button" href={`${base}day-retreat/`}>One-day retreat</a>
+        <a class="button secondary" href={`${base}work-with-jane/`}>Work with Jane</a>
       </div>
     </div>
     <figure class="hero-media">
@@ -36,6 +37,29 @@ const base = import.meta.env.BASE_URL.endsWith("/")
       follow. It is simply to be heard deeply, without judgement, by someone who
       knows how to hold space.
     </p>
+  </section>
+
+  <section class="offer-grid" aria-label="Current offerings">
+    <article>
+      <p class="small-label">Saturday 4 July</p>
+      <h3>A day of meditation and relaxation</h3>
+      <p>
+        A small, nourishing day in Aylsham with meditation, gentle accessible
+        yoga, breathing practices, Yoga Nidra, vegan lunch, refreshments, and
+        spacious time to rest.
+      </p>
+      <a href={`${base}day-retreat/`}>Read the day retreat details</a>
+    </article>
+    <article>
+      <p class="small-label">Free weekly group</p>
+      <h3>Awakening Dignity practice group</h3>
+      <p>
+        A six-month Monday morning journey into dignity, compassion, meditation,
+        contemplation, and meaningful connection. Available in Aylsham and
+        online.
+      </p>
+      <a href={`${base}awakening-dignity/`}>Explore the practice group</a>
+    </article>
   </section>
 
   <section class="section section-narrow">

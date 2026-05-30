@@ -1,0 +1,119 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+---
+
+<BaseLayout
+  title="Awakening Dignity Practice Group | Held Space Retreats"
+  description="A free weekly Aylsham and online practice group exploring dignity, compassion, meditation, and meaningful connection."
+>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Free Monday practice group</p>
+      <h1>Awakening Dignity Across the Globe</h1>
+      <p class="lede">
+        A six-month journey into inner dignity, compassion, and meaningful
+        connection, meeting weekly in Aylsham and online until the end of
+        September 2026.
+      </p>
+      <div class="button-row">
+        <a class="button" href="mailto:janealdiss@gmail.com">Ask Jane about joining</a>
+        <a class="button secondary" href="https://www.samyeinstitute.org/awakening-dignity-across-the-globe/">
+          Samye Institute information
+        </a>
+      </div>
+    </div>
+    <figure class="hero-media">
+      <img
+        src={`${base}assets/retreat-cottage-placeholder.webp`}
+        alt="A quiet contemplative setting for a meditation practice group"
+      />
+      <figcaption>Visual direction placeholder</figcaption>
+    </figure>
+  </section>
+
+  <section class="statement">
+    <p>
+      Rooted in ancient Buddhist wisdom yet fully accessible to all, this is not
+      a religious programme. The book and online course are helpful resources,
+      but they are not required to take part in the local practice group.
+    </p>
+  </section>
+
+  <section class="feature-grid" aria-label="What participants explore">
+    <article>
+      <h3>Basic goodness</h3>
+      <p>Ground your life in the dignity and basic goodness already present.</p>
+    </article>
+    <article>
+      <h3>Difficult emotions</h3>
+      <p>Work with habitual patterns and emotional difficulty with more kindness.</p>
+    </article>
+    <article>
+      <h3>Daily stability</h3>
+      <p>Meet life's challenges with stability, clarity, compassion, and ease.</p>
+    </article>
+  </section>
+
+  <section class="split">
+    <div>
+      <p class="eyebrow">Weekly format</p>
+      <h2>Read, meditate, contemplate, integrate</h2>
+      <p>
+        Each weekly session includes readings and videos to deepen understanding,
+        meditation exercises to enhance experience, and contemplation to help
+        integrate learning into daily life.
+      </p>
+      <p>
+        Participants receive home practice resources each week to help build a
+        steady, meaningful routine between sessions.
+      </p>
+    </div>
+    <div class="note-panel">
+      <p class="small-label">Meeting details</p>
+      <ul class="list-clean">
+        <li>Mondays, 9:30-11:00am GMT.</li>
+        <li>Please arrive by 9:15am for a prompt start.</li>
+        <li>Meeting weekly until the end of September 2026.</li>
+        <li>Aylsham, Norfolk, also available online.</li>
+        <li>Bring a notebook and pen.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="eyebrow">Global sessions</p>
+    <h2>Monthly online gatherings</h2>
+    <p>
+      Free monthly gatherings are led by experienced Samye instructors and are
+      open to everyone, whether or not they are part of a local group.
+      Participants can join at home or watch together in Aylsham.
+    </p>
+    <div class="detail-grid">
+      <article>
+        <h3>Saturday 14 June</h3>
+        <p>8:00am EDT / 1:00pm UK.</p>
+      </article>
+      <article>
+        <h3>Saturday 11 July</h3>
+        <p>8:00am EDT.</p>
+      </article>
+      <article>
+        <h3>Saturday 8 August</h3>
+        <p>8:00am EDT.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="contact-band">
+    <div>
+      <p class="eyebrow">Questions welcome</p>
+      <h2>Contact Jane before the first session</h2>
+      <p>Jane can explain the local group, online access, and the optional resources.</p>
+    </div>
+    <a class="button" href="mailto:janealdiss@gmail.com">Email Jane</a>
+  </section>
+</BaseLayout>
