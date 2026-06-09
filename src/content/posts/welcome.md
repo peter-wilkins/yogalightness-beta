@@ -14,7 +14,7 @@ The current shape focuses on three clear offerings:
 
 - one-to-one contemplative companionship and clarity sessions
 - spacious personal retreats in North Norfolk
-- Yurlod Kurpa, a tiny solo meditation cottage for self-retreat
+- Yurlod Kurpa, a tiny solo retreat cottage for self-retreat
 
 The visual direction is soft, natural, and reflective. The images are generated
 placeholders for layout and tone while Jane chooses final photography.
