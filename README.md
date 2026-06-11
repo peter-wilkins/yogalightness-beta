@@ -10,9 +10,15 @@ npm run dev
 npm run build
 ```
 
-## Published Beta
+## Published Site
 
-This repo is configured for GitHub Pages immediately:
+Canonical domain:
+
+```text
+https://stillground.co.uk/
+```
+
+This repo is configured for GitHub Pages:
 
 ```text
 https://peter-wilkins.github.io/yogalightness-beta/
