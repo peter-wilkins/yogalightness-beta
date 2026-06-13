@@ -4,6 +4,51 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const base = import.meta.env.BASE_URL.endsWith("/")
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
+
+const galleryPhotos = [
+  {
+    src: `${base}assets/retreat-cottage/retreat-cottage-studio-bed.webp`,
+    alt: "The bed and compact studio space inside Yurlod Kurpa Retreat Cottage",
+    caption: "Studio bed beneath exposed beams",
+    width: 975,
+    height: 1300,
+  },
+  {
+    src: `${base}assets/retreat-cottage/retreat-cottage-practice-room.webp`,
+    alt: "A quiet sitting and practice area inside the retreat cottage",
+    caption: "Practice and sitting space",
+    width: 975,
+    height: 1300,
+  },
+  {
+    src: `${base}assets/retreat-cottage/retreat-cottage-kitchen.webp`,
+    alt: "The compact self-catering kitchen with a cooker inside the retreat cottage",
+    caption: "Compact self-catering kitchen",
+    width: 975,
+    height: 1300,
+  },
+  {
+    src: `${base}assets/retreat-cottage/retreat-cottage-shower-room.webp`,
+    alt: "The separate shower room inside Yurlod Kurpa Retreat Cottage",
+    caption: "Separate shower room",
+    width: 975,
+    height: 1300,
+  },
+  {
+    src: `${base}assets/retreat-cottage/retreat-cottage-garden.webp`,
+    alt: "Trees and green garden space around the retreat cottage",
+    caption: "Garden and trees around the cottage",
+    width: 1300,
+    height: 975,
+  },
+  {
+    src: `${base}assets/retreat-cottage/retreat-cottage-patio-view.webp`,
+    alt: "A view from the retreat cottage doorway across the patio and garden",
+    caption: "View from the cottage door",
+    width: 975,
+    height: 1300,
+  },
+];
 ---
 
 <BaseLayout
@@ -25,10 +70,14 @@ const base = import.meta.env.BASE_URL.endsWith("/")
     </div>
     <figure class="hero-media">
       <img
-        src={`${base}assets/retreat-cottage-placeholder.webp`}
-        alt="A small brick retreat cottage beside a quiet garden and open fields"
+        src={`${base}assets/retreat-cottage/retreat-cottage-exterior.webp`}
+        alt="The brick exterior of Yurlod Kurpa Retreat Cottage beside the garden"
+        width="1800"
+        height="1350"
+        decoding="async"
+        fetchpriority="high"
       />
-      <figcaption>Visual direction placeholder</figcaption>
+      <figcaption>Yurlod Kurpa Retreat Cottage</figcaption>
     </figure>
   </section>
 
@@ -37,6 +86,32 @@ const base = import.meta.env.BASE_URL.endsWith("/")
       For the right person, the dimensions are part of what makes it work.
       Everything is within reach. There is nowhere to be except here.
     </p>
+  </section>
+
+  <section class="section photo-gallery" aria-labelledby="cottage-gallery-heading">
+    <p class="eyebrow">Gallery</p>
+    <h2 id="cottage-gallery-heading">Inside and outside Yurlod Kurpa</h2>
+    <p>
+      A first look at the cottage, garden, and practical spaces for a solo
+      self-catering retreat.
+    </p>
+    <div class="gallery-grid">
+      {
+        galleryPhotos.map((photo) => (
+          <figure>
+            <img
+              src={photo.src}
+              alt={photo.alt}
+              width={photo.width}
+              height={photo.height}
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>{photo.caption}</figcaption>
+          </figure>
+        ))
+      }
+    </div>
   </section>
 
   <section class="split">
