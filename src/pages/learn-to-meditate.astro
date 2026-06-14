@@ -1,0 +1,151 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+---
+
+<BaseLayout
+  title="Learn to Meditate in a Weekend | Still Ground"
+  description="A private, structured weekend introduction to meditation with Jane Aldiss in Aylsham, North Norfolk."
+>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">A private weekend introduction</p>
+      <h1>Learn to meditate in a weekend</h1>
+      <p class="lede">
+        A private, structured introduction to meditation held over a weekend at
+        Jane's home in Aylsham, North Norfolk. Buddhist-informed but without
+        doctrine or dogma: no beliefs required, no previous experience necessary.
+      </p>
+      <div class="button-row">
+        <a class="button" href="mailto:janealdiss@gmail.com">Ask Jane about a weekend</a>
+        <a class="button secondary" href={`${base}personal-retreats/`}>Personal retreats</a>
+      </div>
+    </div>
+    <figure class="hero-media">
+      <img
+        src={`${base}assets/held-space-placeholder.webp`}
+        alt="A quiet meditation space with soft natural light"
+      />
+      <figcaption>Private meditation teaching</figcaption>
+    </figure>
+  </section>
+
+  <section class="statement">
+    <p>
+      One guest. One teacher. Unhurried, genuinely personalised, and built around
+      you.
+    </p>
+  </section>
+
+  <section class="feature-grid" aria-label="What is included">
+    <article>
+      <h3>Private teaching</h3>
+      <p>
+        Three one-to-one teaching sessions across Friday evening, Saturday, and
+        Sunday, with guided sits morning and evening.
+      </p>
+    </article>
+    <article>
+      <h3>Held weekend</h3>
+      <p>
+        A private ensuite room, nourishing vegan gluten-free meals, and spacious
+        time to rest, walk, journal, or simply be.
+      </p>
+    </article>
+    <article>
+      <h3>Practice to take home</h3>
+      <p>
+        A written summary of your personal practice, plus a follow-up
+        conversation two weeks after your return.
+      </p>
+    </article>
+  </section>
+
+  <section class="split">
+    <div>
+      <p class="eyebrow">Included</p>
+      <h2>A complete weekend container</h2>
+      <ul class="list-clean">
+        <li>Private ensuite room for the weekend.</li>
+        <li>Three one-to-one teaching sessions.</li>
+        <li>Guided sits morning and evening.</li>
+        <li>Nourishing home-cooked vegan, gluten-free meals throughout.</li>
+        <li>A guided walk through National Trust parkland or along the Norfolk coast.</li>
+        <li>Reiki session available on request.</li>
+        <li>Spacious unstructured time to rest, walk, journal, or simply be.</li>
+        <li>A written summary of your personal practice to take home.</li>
+        <li>A follow-up conversation two weeks after your return.</li>
+      </ul>
+    </div>
+    <div class="price-panel">
+      <p class="small-label">Investment</p>
+      <strong>£1,200</strong>
+      <p>Fully inclusive of accommodation, all meals, and teaching.</p>
+      <p>
+        A supported rate of £950 is available if the standard rate is a genuine
+        obstacle. Just ask: no explanation needed.
+      </p>
+      <p>A free 20-minute conversation is offered before booking.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="eyebrow">The shape of the weekend</p>
+    <h2>Simple, steady, and spacious</h2>
+    <div class="schedule">
+      <article>
+        <h3>Friday from 4pm</h3>
+        <p>
+          Arrive, settle in, share a welcome supper, have an introductory
+          conversation, and take a short first sit.
+        </p>
+      </article>
+      <article>
+        <h3>Saturday</h3>
+        <p>
+          Morning sit, breakfast, first full teaching session, spacious
+          afternoon, evening teaching session, and shared dinner.
+        </p>
+      </article>
+      <article>
+        <h3>Sunday</h3>
+        <p>
+          Morning sit, breakfast, final teaching session to consolidate your
+          practice and build your daily routine, then light lunch and departure
+          when you are ready.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section-narrow">
+    <p class="eyebrow">Who this is for</p>
+    <h2>A private way to begin properly</h2>
+    <ul class="list-clean">
+      <li>Anyone who has always wanted to learn but never quite got started.</li>
+      <li>People who have tried apps or group classes and found them unsatisfying.</li>
+      <li>
+        Those going through stress, burnout, or a period of change who sense
+        meditation might help.
+      </li>
+      <li>
+        Anyone who wants to learn privately, without having to perform for a group.
+      </li>
+    </ul>
+  </section>
+
+  <section class="contact-band">
+    <div>
+      <p class="eyebrow">One weekend. A practice for life.</p>
+      <h2>Leave with a daily practice that fits your actual life</h2>
+      <p>
+        The aim is confidence: a clear understanding of what meditation is, direct
+        experience of sitting practice, and a simple routine you can sustain.
+      </p>
+    </div>
+    <a class="button" href="mailto:janealdiss@gmail.com">Email Jane</a>
+  </section>
+</BaseLayout>
