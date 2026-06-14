@@ -1,14 +1,14 @@
 ---
-title: "Public Beta Notes"
-tldr: "The site now uses Jane's new retreat and contemplative support copy, shaped into a calm public beta."
-description: "Current notes for the Yoga Lightness public beta."
+title: "Site Notes"
+tldr: "The site uses Jane's retreat and contemplative support copy, shaped into a calm first version."
+description: "Internal notes for the Still Ground site."
 date: "2026-05-30"
-draft: false
-tags: ["beta", "new-copy"]
+draft: true
+tags: ["site-notes", "new-copy"]
 ---
 
-This beta has moved from a holding shell into a first public version built from
-Jane's fresh writing.
+This site has moved from a holding shell into a first public version built from
+Jane's writing.
 
 The current shape focuses on three clear offerings:
 
@@ -23,5 +23,4 @@ placeholders for layout and tone while Jane chooses final photography.
 
 - Replace generated placeholder images with real approved photographs.
 - Confirm contact details, prices, and availability.
-- Decide whether the website should keep the Yoga Lightness name or lead more
-  strongly with Jane's name and Still Ground.
+- Keep the website aligned with Jane's name and Still Ground.

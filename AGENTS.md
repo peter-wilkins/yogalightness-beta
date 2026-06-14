@@ -1,6 +1,6 @@
 # Agent Instructions
 
-This repo is the public beta site for Jane Aldiss / Still Ground.
+This repo is the live website for Jane Aldiss / Still Ground.
 
 ## Role
 
@@ -46,7 +46,7 @@ a ledger, but the agent should still behave as request-response.
 npm run build
 ```
 
-Public beta URL:
+GitHub Pages URL:
 
 ```text
 https://peter-wilkins.github.io/yogalightness-beta/

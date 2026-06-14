@@ -6,6 +6,10 @@ const forbidden = [
   /Held Space Retreats/i,
   /Held Space/i,
   /held-space-retreats/i,
+  /Yoga Lightness Beta/i,
+  /mailto:[^"'\s>]*(gmail|googlemail)\.com/i,
+  /[A-Z0-9._%+-]+@(gmail|googlemail)\.com/i,
+  /Public beta/i,
 ];
 
 const files = globSync("{AGENTS.md,src/**/*.{astro,md,ts,js,css}}", {
@@ -24,7 +28,7 @@ for (const file of files) {
 }
 
 if (failures.length) {
-  console.error("Stale Still Ground brand text found:");
+  console.error("Stale or private public-site text found:");
   for (const failure of failures) console.error(`- ${failure}`);
   process.exit(1);
 }

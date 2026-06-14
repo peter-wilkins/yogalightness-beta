@@ -1,6 +1,6 @@
-# Yoga Lightness Beta
+# Still Ground
 
-A public beta rebuild of Yoga Lightness for Jane to review.
+The live Still Ground website for Jane Aldiss.
 
 ## Commands
 
@@ -49,7 +49,7 @@ npm run dev
 Asset plan:
 
 ```bash
-python3 scripts/plan_blog_assets.py --name 'Yoga Lightness Beta' --subject 'yoga, lightness, kundalini, classes, and reflective practice'
+python3 scripts/plan_blog_assets.py --name 'Still Ground' --subject 'meditation, retreats, contemplative support, Norfolk, and reflective practice'
 ```
 
 Posts live in:
@@ -63,5 +63,5 @@ publish.
 
 ## Source Policy
 
-Jane has said not to reuse the old website. Keep this beta as a clean staging
-site for new copy and theme exploration.
+Jane has said not to reuse the old website. Keep this site on the new Still
+Ground copy and clearly marked placeholder content only.
