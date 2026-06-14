@@ -24,4 +24,4 @@ placeholders for layout and tone while Jane chooses final photography.
 - Replace generated placeholder images with real approved photographs.
 - Confirm contact details, prices, and availability.
 - Decide whether the website should keep the Yoga Lightness name or lead more
-  strongly with Jane's name and Held Space Retreats.
+  strongly with Jane's name and Still Ground.
