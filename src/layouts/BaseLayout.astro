@@ -5,16 +5,25 @@ import "../styles/themes.css";
 interface Props {
   title?: string;
   description?: string;
+  canonicalPath?: string;
+  noindex?: boolean;
+  image?: string;
 }
 
 const {
   title = "Still Ground | North Norfolk",
   description = "One-to-one contemplative support, spacious retreats, meditation days, and solo practice space with Jane Aldiss in North Norfolk.",
+  canonicalPath,
+  noindex = false,
+  image = "/assets/social/still-ground-og.jpg",
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL.endsWith("/")
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
+const siteUrl = (Astro.site?.toString() ?? "https://stillground.co.uk").replace(/\/$/, "");
+const canonicalUrl = new URL(canonicalPath ?? Astro.url.pathname, `${siteUrl}/`).toString();
+const imageUrl = new URL(image, `${siteUrl}/`).toString();
 ---
 
 <!doctype html>
@@ -23,6 +32,35 @@ const base = import.meta.env.BASE_URL.endsWith("/")
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" href={`${base}favicon.ico`} sizes="any" />
+    <link rel="icon" href={`${base}favicon.png`} type="image/png" />
+    <meta property="og:site_name" content="Still Ground" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={imageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: "Still Ground",
+      url: siteUrl,
+      email: "hello@stillground.co.uk",
+      areaServed: "North Norfolk",
+      founder: {
+        "@type": "Person",
+        name: "Jane Aldiss",
+      },
+      makesOffer: [
+        "One-to-one contemplative support",
+        "Private meditation retreats",
+        "Learn to meditate weekends",
+        "Solo retreat cabin stays",
+      ],
+    })} />
     <title>{title}</title>
   </head>
   <body>

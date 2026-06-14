@@ -8,7 +8,7 @@ html {
   --heading: #1f3128;
   --green: #335f50;
   --green-deep: #294a40;
-  --accent: #9f664d;
+  --accent: #875038;
   --line: rgba(75, 93, 76, 0.2);
   --shadow: rgba(52, 70, 54, 0.2);
 }
@@ -84,6 +84,18 @@ nav {
   font-size: 0.94rem;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 main {
   max-width: 1180px;
   margin: 0 auto;
@@ -113,6 +125,8 @@ main {
   box-shadow: 0 24px 80px var(--shadow);
 }
 
+.hero-media picture,
+.retreat-image picture,
 .hero-media img,
 .image-panel img,
 .retreat-image img {

@@ -23,13 +23,21 @@ const base = import.meta.env.BASE_URL.endsWith("/")
       </div>
     </div>
     <figure class="hero-media">
-      <img
-        src={`${base}assets/retreat-cottage/retreat-cottage-exterior.webp`}
-        alt="The brick exterior of The Retreat beside the garden"
-        width="1800"
-        height="1350"
-        decoding="async"
-      />
+      <picture>
+        <source
+          srcset={`${base}assets/retreat-cottage/retreat-cottage-exterior-640.webp 640w, ${base}assets/retreat-cottage/retreat-cottage-exterior-900.webp 900w, ${base}assets/retreat-cottage/retreat-cottage-exterior.webp 1800w`}
+          sizes="(max-width: 860px) 100vw, 54vw"
+          type="image/webp"
+        />
+        <img
+          src={`${base}assets/retreat-cottage/retreat-cottage-exterior-900.webp`}
+          alt="The brick exterior of The Retreat beside the garden"
+          width="900"
+          height="676"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </picture>
       <figcaption>The Retreat</figcaption>
     </figure>
   </section>
@@ -43,6 +51,7 @@ const base = import.meta.env.BASE_URL.endsWith("/")
   </section>
 
   <section class="offer-grid" aria-label="Current offerings">
+    <h2 class="sr-only">Current offerings</h2>
     <article>
       <p class="small-label">Saturday 4 July</p>
       <h3>A day of meditation and relaxation</h3>
@@ -124,10 +133,21 @@ const base = import.meta.env.BASE_URL.endsWith("/")
       <a class="button" href={`${base}personal-retreats/`}>Explore personal retreats</a>
     </div>
     <figure class="retreat-image">
-      <img
-        src={`${base}assets/held-space-placeholder.webp`}
-        alt="A calm retreat room with a meditation cushion and soft natural light"
-      />
+      <picture>
+        <source
+          srcset={`${base}assets/held-space-placeholder-480.webp 480w, ${base}assets/held-space-placeholder-720.webp 720w, ${base}assets/held-space-placeholder.webp 1448w`}
+          sizes="(max-width: 860px) 100vw, 42vw"
+          type="image/webp"
+        />
+        <img
+          src={`${base}assets/held-space-placeholder-720.webp`}
+          alt="A calm retreat room with a meditation cushion and soft natural light"
+          width="720"
+          height="540"
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
       <figcaption>Visual direction placeholder</figcaption>
     </figure>
   </section>

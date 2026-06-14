@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /theme-preview/
+
+Sitemap: https://stillground.co.uk/sitemap.xml
