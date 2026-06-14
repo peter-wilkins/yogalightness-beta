@@ -1,0 +1,313 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
+const galleryPhotos = [
+  {
+    src: `${base}assets/retreat-cottage/retreat-cottage-studio-bed.webp`,
+    alt: "The bed and compact studio space inside The Retreat",
+    caption: "Studio bed beneath exposed beams",
+    width: 975,
+    height: 1300,
+  },
+  {
+    src: `${base}assets/retreat-cottage/retreat-cottage-practice-room.webp`,
+    alt: "A quiet sitting and practice area inside The Retreat",
+    caption: "Practice and sitting space",
+    width: 975,
+    height: 1300,
+  },
+  {
+    src: `${base}assets/retreat-cottage/retreat-cottage-kitchen.webp`,
+    alt: "The compact self-catering kitchen with a cooker inside The Retreat",
+    caption: "Compact self-catering kitchen",
+    width: 975,
+    height: 1300,
+  },
+  {
+    src: `${base}assets/retreat-cottage/retreat-cottage-shower-room.webp`,
+    alt: "The separate shower room inside The Retreat",
+    caption: "Separate shower room",
+    width: 975,
+    height: 1300,
+  },
+  {
+    src: `${base}assets/retreat-cottage/retreat-cottage-garden.webp`,
+    alt: "Trees and green garden space around The Retreat",
+    caption: "Garden and trees around the cabin",
+    width: 1300,
+    height: 975,
+  },
+  {
+    src: `${base}assets/retreat-cottage/retreat-cottage-patio-view.webp`,
+    alt: "A view from The Retreat doorway across the patio and garden",
+    caption: "View from the cabin door",
+    width: 975,
+    height: 1300,
+  },
+];
+---
+
+<BaseLayout
+  title="The Retreat | Held Space Retreats"
+  description="A tiny solo retreat cabin in Oulton, near Aylsham, Norfolk, available for 5 to 28 night self-catering retreat stays."
+>
+  <section class="hero retreat-hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Oulton, nr Aylsham, Norfolk · Solo stays 5 to 28 nights</p>
+      <h1>The Retreat</h1>
+      <p class="retreat-tagline">A space that holds you.</p>
+      <p class="lede">
+        A tiny private cabin in rural Norfolk, available to solo retreat guests
+        for stays of 5 to 28 nights. No WiFi. No television. Limited phone
+        signal. A half-acre garden surrounded by farmland, birds, and quiet.
+      </p>
+      <div class="button-row">
+        <a class="button" href="mailto:janealdiss@gmail.com">Enquire</a>
+        <a class="button secondary" href="#details">Practical details</a>
+      </div>
+    </div>
+    <figure class="hero-media">
+      <img
+        src={`${base}assets/retreat-cottage/retreat-cottage-exterior.webp`}
+        alt="The brick exterior of The Retreat beside the garden"
+        width="1800"
+        height="1350"
+        decoding="async"
+        fetchpriority="high"
+      />
+      <figcaption>The Retreat</figcaption>
+    </figure>
+  </section>
+
+  <section class="statement">
+    <p>
+      For the right person, the size is the point. Everything is within reach.
+      There is nowhere to be except here.
+    </p>
+  </section>
+
+  <section class="section photo-gallery" aria-labelledby="retreat-gallery-heading">
+    <p class="eyebrow">Gallery</p>
+    <h2 id="retreat-gallery-heading">Inside and outside The Retreat</h2>
+    <p>
+      A first look at the cabin, garden, and practical spaces for a solo
+      self-catering retreat.
+    </p>
+    <div class="gallery-grid">
+      {
+        galleryPhotos.map((photo) => (
+          <figure>
+            <img
+              src={photo.src}
+              alt={photo.alt}
+              width={photo.width}
+              height={photo.height}
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>{photo.caption}</figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="split" id="details">
+    <div>
+      <p class="eyebrow">Before you book</p>
+      <h2>This is a very small space, intentionally</h2>
+      <p>
+        The Retreat is a brick-built single-storey cabin, something like a
+        brick-built shepherd's hut. Its dimensions are 22 feet long by 7 feet
+        wide.
+      </p>
+      <p>
+        Past guests have been surprised by the size, so it is important to be
+        honest about this. There is one room: a studio bedsit with exposed beams
+        and a small wall window. A separate shower room. A compact but
+        well-equipped kitchen. That's it.
+      </p>
+    </div>
+    <div class="note-panel">
+      <p class="small-label">At a glance</p>
+      <ul class="list-clean">
+        <li>Solo guests only.</li>
+        <li>Minimum stay 5 nights, maximum stay 28 nights.</li>
+        <li>No WiFi, no TV, limited phone signal.</li>
+        <li>Self-catering, with a properly equipped kitchen.</li>
+        <li>Separate shower room.</li>
+        <li>Off-road parking for one car.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="feature-grid" aria-label="Inside The Retreat">
+    <article>
+      <h3>Studio bedsit</h3>
+      <p>
+        A single studio space with exposed beamed ceiling, small wall window,
+        and double sofa bed.
+      </p>
+    </article>
+    <article>
+      <h3>Practice space</h3>
+      <p>
+        There is floor space to set up a cushion, a yoga mat, or simply to move.
+      </p>
+    </article>
+    <article>
+      <h3>Longer stays</h3>
+      <p>
+        The kitchen includes a full-sized cooker, fridge, kettle, washing
+        machine, and what is needed for a longer self-catering stay. A full
+        inventory is available on request.
+      </p>
+    </article>
+  </section>
+
+  <section class="split">
+    <div>
+      <p class="eyebrow">Outside</p>
+      <h2>The grounds</h2>
+      <p>
+        The cabin sits within a half-acre plot surrounded by farmland. It is
+        private and completely separate from the neighbouring houses. The garden
+        has a lawn, patio, and mature trees, good for walking practice, sitting
+        outside, or simply being in the open air. There are birds and wildlife.
+      </p>
+      <p>
+        To maintain the half-acre, gardeners attend approximately once a
+        fortnight. They work outside only and guests are not expected to
+        interact with them, though they may briefly be aware of their presence.
+        Wherever possible this falls on a fixed day, with details in the welcome
+        note.
+      </p>
+    </div>
+    <div class="note-panel">
+      <p class="small-label">Local area</p>
+      <ul class="list-clean">
+        <li>Itteringham village shop and cafe: around 20 minutes on foot.</li>
+        <li>Blickling Hall: about 1.5 miles by road and track.</li>
+        <li>Aylsham: 4 miles.</li>
+        <li>Norfolk coast: around 10 miles north.</li>
+        <li>Norwich: 16.6 miles south.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="eyebrow">Who this is for</p>
+    <h2>The right guest</h2>
+    <p>
+      This is not a holiday cottage. It is a retreat space. The absence of
+      television, internet, and distraction is not a limitation; it is the whole
+      point.
+    </p>
+    <div class="fit-grid">
+      <article>
+        <h3>Good fit</h3>
+        <ul class="list-clean">
+          <li>Solo meditation or mindfulness retreat.</li>
+          <li>Writing, creative work, or study.</li>
+          <li>Recovery from burnout or illness.</li>
+          <li>Grief, transition, or a major life threshold.</li>
+          <li>Spiritual or contemplative practice.</li>
+          <li>A genuine digital detox.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Probably not for you</h3>
+        <ul class="list-clean">
+          <li>You need constant internet access.</li>
+          <li>You want a base for exploring Norfolk.</li>
+          <li>You are looking for luxury or modern comforts.</li>
+          <li>You dislike silence.</li>
+          <li>You want a romantic break for two.</li>
+          <li>You are booking for more than one person.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="split">
+    <div>
+      <p class="eyebrow">Preparation</p>
+      <h2>What to bring</h2>
+      <p>
+        Guests bring their own linen, towels, and kitchen towels. Please also
+        bring whatever practice materials you need: cushion, altar items, books,
+        art materials, or anything else that supports your time here.
+      </p>
+      <p>
+        This is not a serviced property. Guests are responsible for cleaning the
+        cabin before they leave. Instructions and cleaning materials are
+        provided.
+      </p>
+    </div>
+    <div class="note-panel">
+      <p class="small-label">Cleaning</p>
+      <p>
+        If the cabin requires a professional clean on departure, this will be
+        charged at £100. The £150 deposit covers this and any electricity
+        balance.
+      </p>
+    </div>
+  </section>
+
+  <section class="split">
+    <div>
+      <p class="eyebrow">Pricing</p>
+      <h2>Simple rates, with support available</h2>
+      <div class="detail-grid">
+        <article>
+          <h3>Standard</h3>
+          <p>Both summer and winter.</p>
+          <p><strong>£50 per night</strong></p>
+        </article>
+        <article>
+          <h3>Supported summer</h3>
+          <p>Easter to the end of October half term.</p>
+          <p><strong>£40 per night</strong></p>
+        </article>
+        <article>
+          <h3>Supported winter</h3>
+          <p>November to Easter.</p>
+          <p><strong>£35 per night</strong></p>
+        </article>
+      </div>
+      <p>
+        Supported rates are available on request with no explanation needed,
+        for meditators, dharma practitioners, and anyone for whom the standard
+        rate is a genuine obstacle.
+      </p>
+    </div>
+    <div class="price-panel">
+      <p class="small-label">Stay length</p>
+      <strong>5-28 nights</strong>
+      <p>20% off for stays of 15-28 nights.</p>
+      <p>Electricity is charged at cost, based on meter readings taken at arrival and departure.</p>
+      <p>£150 deposit required on booking.</p>
+    </div>
+  </section>
+
+  <section class="statement quote-statement">
+    <p>A space that holds you.</p>
+  </section>
+
+  <section class="contact-band">
+    <div>
+      <p class="eyebrow">Enquiries</p>
+      <h2>Get in touch before booking</h2>
+      <p>
+        If you are not sure whether the cabin is right for your retreat, or if
+        you are planning a longer stay, JaneCatherine is happy to talk it
+        through before you book.
+      </p>
+    </div>
+    <a class="button" href="mailto:janealdiss@gmail.com">Email JaneCatherine</a>
+  </section>
+</BaseLayout>
