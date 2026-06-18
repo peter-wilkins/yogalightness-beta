@@ -15,7 +15,7 @@ const {
   description = "One-to-one contemplative support, spacious retreats, meditation days, and solo practice space with Jane Aldiss in North Norfolk.",
   canonicalPath,
   noindex = false,
-  image = "/assets/social/still-ground-og.jpg",
+  image = "/assets/social/still-ground-lotus.jpg",
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL.endsWith("/")
@@ -81,5 +81,15 @@ const imageUrl = new URL(image, `${siteUrl}/`).toString();
     <main>
       <slot />
     </main>
+    <figure class="site-lotus" aria-hidden="true">
+      <img
+        src={`${base}assets/site/lotus-continuity.webp`}
+        alt=""
+        width="640"
+        height="426"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
   </body>
 </html>
