@@ -24,10 +24,14 @@ const base = import.meta.env.BASE_URL.endsWith("/")
         <a class="button secondary" href={`${base}work-with-jane/`}>Meet Jane</a>
       </div>
     </div>
-    <figure class="hero-media">
+    <figure class="hero-media image-contain">
       <img
-        src={`${base}assets/held-space-placeholder.webp`}
-        alt="A light-filled retreat room with soft fabrics and a meditation cushion"
+        src={`${base}assets/personal-retreats/beach-retreat.webp`}
+        alt="Open beach, sea, and sky for a spacious personal retreat"
+        width="760"
+        height="570"
+        decoding="async"
+        fetchpriority="high"
       />
       <figcaption>Personal retreat space</figcaption>
     </figure>

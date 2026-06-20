@@ -1,16 +1,16 @@
 html {
-  --page: #f4efe5;
-  --paper: #fffaf1;
-  --paper-warm: #eadfce;
-  --paper-green: #e4eadc;
-  --ink: #26342d;
-  --muted: #48564a;
-  --heading: #1f3128;
-  --green: #335f50;
-  --green-deep: #294a40;
-  --accent: #875038;
-  --line: rgba(75, 93, 76, 0.2);
-  --shadow: rgba(52, 70, 54, 0.2);
+  --page: #f2eee6;
+  --paper: #fffaf2;
+  --paper-warm: #eadbd0;
+  --paper-green: #dfe7e1;
+  --ink: #243232;
+  --muted: #4a5a55;
+  --heading: #1f3030;
+  --green: #2f5a54;
+  --green-deep: #244742;
+  --accent: #8b6046;
+  --line: rgba(56, 76, 72, 0.2);
+  --shadow: rgba(44, 62, 60, 0.2);
 }
 
 html {
@@ -34,7 +34,7 @@ body::before {
   z-index: -1;
   pointer-events: none;
   content: "";
-  background: linear-gradient(120deg, rgba(234, 223, 206, 0.58), rgba(228, 234, 220, 0.42));
+  background: linear-gradient(120deg, rgba(234, 219, 208, 0.56), rgba(221, 232, 229, 0.44));
   opacity: 0.5;
 }
 
@@ -125,6 +125,14 @@ main {
   box-shadow: 0 24px 80px var(--shadow);
 }
 
+.hero-media.image-contain {
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255, 250, 242, 0.86), rgba(223, 231, 225, 0.64));
+}
+
 .hero-media picture,
 .retreat-image picture,
 .hero-media img,
@@ -134,6 +142,13 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.hero-media.image-contain img,
+.retreat-image.image-contain img {
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .hero-media figcaption,
@@ -481,6 +496,21 @@ p {
   object-fit: cover;
 }
 
+.profile-circle-large {
+  width: min(260px, 68vw);
+  height: min(260px, 68vw);
+  margin: 24px auto 0;
+}
+
+.about-jane-section {
+  text-align: center;
+}
+
+.about-jane-section p {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .quote-statement p {
   color: var(--green);
   font-style: italic;
@@ -488,7 +518,7 @@ p {
 
 @media (max-width: 860px) {
   body::before {
-    background-image: linear-gradient(90deg, rgba(244, 239, 229, 0.94), rgba(255, 250, 241, 0.88));
+    background-image: linear-gradient(90deg, rgba(242, 238, 230, 0.94), rgba(255, 250, 242, 0.88));
   }
 
   .hero,
@@ -512,6 +542,10 @@ p {
   .image-panel,
   .retreat-image {
     min-height: 320px;
+  }
+
+  .hero-media.image-contain {
+    min-height: 300px;
   }
 
   h1 {

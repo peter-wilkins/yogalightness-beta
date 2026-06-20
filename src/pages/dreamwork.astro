@@ -10,18 +10,31 @@ const base = import.meta.env.BASE_URL.endsWith("/")
   title="Dreamwork with Jane | Still Ground"
   description="Gentle, spacious dreamwork sessions with Jane Aldiss online worldwide or in person in North Norfolk."
 >
-  <section class="page-title section-narrow">
-    <p class="eyebrow">Dreamwork with Jane</p>
-    <h1>What the dreaming mind is trying to tell you</h1>
-    <p class="lede">
-      Dreams carry information that the waking mind has not yet found words for.
-      Working with them gently, and without agenda, can be a direct route into
-      self-understanding.
-    </p>
-    <div class="button-row">
-      <a class="button" href="mailto:hello@stillground.co.uk">Ask Jane about dreamwork</a>
-      <a class="button secondary" href={`${base}personal-retreats/`}>Personal retreats</a>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Dreamwork with Jane</p>
+      <h1>What the dreaming mind is trying to tell you</h1>
+      <p class="lede">
+        Dreams carry information that the waking mind has not yet found words
+        for. Working with them gently, and without agenda, can be a direct route
+        into self-understanding.
+      </p>
+      <div class="button-row">
+        <a class="button" href="mailto:hello@stillground.co.uk">Ask Jane about dreamwork</a>
+        <a class="button secondary" href={`${base}personal-retreats/`}>Personal retreats</a>
+      </div>
     </div>
+    <figure class="hero-media image-contain">
+      <img
+        src={`${base}assets/dreamwork/blue-dreaming.webp`}
+        alt="A blue dreamlike image of a resting face and mountain forms"
+        width="900"
+        height="570"
+        decoding="async"
+        fetchpriority="high"
+      />
+      <figcaption>Dreamwork</figcaption>
+    </figure>
   </section>
 
   <section class="statement">
@@ -180,8 +193,8 @@ const base = import.meta.env.BASE_URL.endsWith("/")
         <h3>Can this be part of a personal retreat?</h3>
         <p>
           Yes. Dreamwork sessions can be shaped into a weekend retreat in
-          Aylsham alongside meditation, yoga, nourishing food, and plenty of time
-          to simply be.
+          Aylsham alongside meditation, nourishing food, and plenty of time to
+          simply be.
         </p>
       </article>
     </div>
