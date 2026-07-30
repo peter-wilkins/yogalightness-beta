@@ -396,6 +396,17 @@ p {
   background: rgba(255, 250, 241, 0.84);
 }
 
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+.testimonial-grid blockquote {
+  margin-top: 18px;
+}
+
 .testimonial-section blockquote p {
   color: var(--heading);
   font-family: Georgia, "Times New Roman", serif;
@@ -548,6 +559,7 @@ p {
   .detail-grid,
   .gallery-grid,
   .fit-grid,
+  .testimonial-grid,
   .split,
   .retreat-feature,
   .contact-band {
