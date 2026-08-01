@@ -1,0 +1,131 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+---
+
+<BaseLayout
+  title="Autumn and Winter Workshops | Still Ground"
+  description="Save the dates for Jane Aldiss's autumn and winter Nidra Nights, movement meditation, dream workshop, Monday practice group, and future day retreats in Aylsham, Norfolk."
+>
+  <section class="page-title section-narrow">
+    <p class="eyebrow">Save the dates</p>
+    <h1>Autumn and winter workshop schedule</h1>
+    <p class="lede">
+      Nidra Nights, dream work, movement, meditation, and relaxation with Jane
+      in Aylsham. Full booking details will follow closer to each session, but
+      you are welcome to register your interest now.
+    </p>
+  </section>
+
+  <section class="statement">
+    <p>
+      Most sessions are limited to a small group of around eight people, to keep
+      things personal and intimate.
+    </p>
+  </section>
+
+  <section class="feature-grid" aria-label="Autumn and winter workshop dates">
+    <article>
+      <p class="small-label">Monthly Fridays</p>
+      <h3>Nidra Night</h3>
+      <p>
+        A monthly evening of guided Yoga Nidra: deep, restorative rest for the
+        nervous system.
+      </p>
+      <p><strong>Fridays, 6:00-8:00pm | 2 hours | &pound;25</strong></p>
+      <ul class="list-clean">
+        <li>Friday 6 November</li>
+        <li>Friday 4 December</li>
+        <li>Friday 8 January</li>
+        <li>Friday 5 February</li>
+        <li>Friday 5 March</li>
+        <li>Friday 2 April</li>
+      </ul>
+    </article>
+
+    <article>
+      <p class="small-label">Monthly Saturdays</p>
+      <h3>Movement, Meditation and Relaxation</h3>
+      <p>
+        A monthly Saturday morning combining gentle movement, breathing
+        practices, relaxation, and meditation.
+      </p>
+      <p><strong>Saturdays, 10:00am-12:00pm | 2 hours | &pound;25</strong></p>
+      <ul class="list-clean">
+        <li>Saturday 17 October</li>
+        <li>Saturday 12 December</li>
+        <li>Saturday 16 January</li>
+        <li>Saturday 20 February</li>
+        <li>Saturday 20 March</li>
+        <li>Saturday 17 April</li>
+      </ul>
+    </article>
+
+    <article>
+      <p class="small-label">Saturday 21 November</p>
+      <h3>Dream Workshop</h3>
+      <p>
+        A deeper dive into dream imagery and symbolism: a new slant on dream
+        work, drawing on Jane's years of guiding people through this territory.
+      </p>
+      <p><strong>10:00am-1:00pm | 3 hours | &pound;40</strong></p>
+      <a href={`${base}dreamwork/`}>Read about dreamwork</a>
+    </article>
+
+    <article>
+      <p class="small-label">Weekly Mondays</p>
+      <h3>Monday Group</h3>
+      <p>
+        The free Awakening Dignity Meditation group continues as usual.
+      </p>
+      <p><strong>Mondays, 9:30-11:00am | Free</strong></p>
+      <a href={`${base}awakening-dignity/`}>Read about the practice group</a>
+    </article>
+
+    <article>
+      <p class="small-label">Dates to follow</p>
+      <h3>Day Retreat</h3>
+      <p>
+        A full day of meditation, movement, breathing, and Yoga Nidra, with a
+        homemade vegan lunch. Held a few times a year.
+      </p>
+      <p><strong>&pound;115-&pound;125</strong></p>
+      <a href={`${base}day-retreat/`}>See the most recent day retreat</a>
+    </article>
+  </section>
+
+  <section class="section testimonial-section">
+    <p class="eyebrow">Kind words</p>
+    <div class="testimonial-grid">
+      <blockquote>
+        <p>
+          Having attended Jane's dream workshops as well as working one to one,
+          I have found her to be an invaluable guide in the exploration and
+          understanding of hidden layers and symbolism.
+        </p>
+        <cite>K.L.</cite>
+      </blockquote>
+      <blockquote>
+        <p>
+          I came to the workshop to gain a deeper understanding of meditation
+          and I certainly have. The day was wonderful. Incredibly relaxing, the
+          food was delicious and I felt very cared for. I would recommend to
+          everyone!
+        </p>
+        <cite>T.F.</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="contact-band">
+    <div>
+      <p class="eyebrow">Register interest</p>
+      <h2>Email Jane if a date calls to you</h2>
+      <p>Full booking details will follow closer to each workshop.</p>
+    </div>
+    <a class="button" href="mailto:hello@stillground.co.uk">Email Jane</a>
+  </section>
+</BaseLayout>
