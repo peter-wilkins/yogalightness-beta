@@ -22,7 +22,7 @@ const base = import.meta.env.BASE_URL.endsWith("/")
         <a class="button secondary" href={`${base}work-with-jane/`}>Work with Jane</a>
       </div>
     </div>
-    <figure class="hero-media">
+    <figure class="hero-media image-contain">
       <picture>
         <source
           srcset={`${base}assets/home/spacious-beach-640.webp 640w, ${base}assets/home/spacious-beach-900.webp 900w, ${base}assets/home/spacious-beach-1500.webp 1500w`}
@@ -38,7 +38,6 @@ const base = import.meta.env.BASE_URL.endsWith("/")
           fetchpriority="high"
         />
       </picture>
-      <figcaption>The Retreat</figcaption>
     </figure>
   </section>
 
