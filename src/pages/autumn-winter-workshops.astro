@@ -8,7 +8,7 @@ const base = import.meta.env.BASE_URL.endsWith("/")
 
 <BaseLayout
   title="Autumn and Winter Workshops | Still Ground"
-  description="Yoga Nidra Nights, Movement, Meditation and Relaxation sessions, a reflective Kundalini Yoga chakra study day, and the Monday practice group in Aylsham, Norfolk."
+  description="Yoga Nidra Nights, Movement, Meditation and Relaxation sessions, a reflective Kundalini Yoga cakra study day, and the Monday practice group in Aylsham, Norfolk."
   showFounder={false}
 >
   <section class="page-title section-narrow">
@@ -73,21 +73,31 @@ const base = import.meta.env.BASE_URL.endsWith("/")
 
     <article class="one-day-workshop">
       <p class="small-label">One-day workshop</p>
-      <h3>Introduction to Kundalini Yoga: The Chakra System</h3>
+      <h3>Introduction to Kundalini: The Cakra System</h3>
       <p>
-        A day of reflective study, exploring the chakras as a map of inner life
+        A day of reflective study, exploring the cakras as a map of inner life
         in the Yasodhara tradition of Kundalini Yoga. No experience needed.
       </p>
+      <figure class="workshop-image">
+        <img
+          src={`${base}assets/kundalini-cakra-chart.jpg`}
+          alt="Close-up of a colourful cakra chart with traditional symbols"
+          width="1226"
+          height="607"
+          loading="lazy"
+          decoding="async"
+        />
+      </figure>
       <p>
         In the Yasodhara tradition, Kundalini Yoga is a thoughtful, grounded
-        path of self-understanding, and the chakras are its map: seven centres
+        path of self-understanding, and the cakras are its map: seven centres
         of awareness, each connected with different aspects of our lives, such
         as security, creativity, will, love, communication, insight and
         spiritual longing.
       </p>
       <p>
-        This day takes you through the chakra system in an experiential way.
-        We&rsquo;ll look at what each chakra represents, the symbols and sounds
+        This day takes you through the cakra system in an experiential way.
+        We&rsquo;ll look at what each cakra represents, the symbols and sounds
         traditionally associated with it, and how these ideas can be used to
         reflect on your own experience, habits, patterns and potential.
       </p>
@@ -97,19 +107,37 @@ const base = import.meta.env.BASE_URL.endsWith("/")
         reflection and ethical living.
       </p>
       <p>
-        Jane trained at Yasodhara Ashram in Canada in 2016, completed the
-        Kundalini and Dream training in 2017, and has been teaching this work
-        ever since.
+        Jane completed her first teacher training in 2003 and has studied all
+        over the world since. Her most recent training was at Yasodhara Ashram
+        in Canada, where she trained in 2016. She completed the Kundalini and
+        Dream training in 2017 and the Hidden Language of Hatha Yoga in 2018.
+        She has been teaching this work ever since.
       </p>
       <p>
-        <strong>Saturday 20 March 2027 | 10am-5pm | &pound;100 including homemade
+        <strong>Saturday 20 March 2027 | 10:00am-5:00pm | &pound;100 including homemade
           vegan lunch</strong>
       </p>
-      <p>&pound;90 early bird before 31 January 2027. Aylsham, Norfolk - address given on booking.</p>
+      <p id="kundalini-early-bird" hidden>&pound;90 early bird before 31 January 2027.</p>
+      <script is:inline>
+        const offer = document.getElementById("kundalini-early-bird");
+        const timeUntilOfferExpiry = Date.parse("2027-02-01T00:00:00Z") - Date.now();
+        if (offer && timeUntilOfferExpiry > 0) {
+          offer.hidden = false;
+          window.setTimeout(() => offer.remove(), timeUntilOfferExpiry);
+        } else {
+          offer?.remove();
+        }
+      </script>
+      <p>Aylsham, Norfolk. Address given on booking.</p>
       <p>Limited to around eight people.</p>
       <p>
         Bring a notebook and anything you need to be comfortable sitting for
         periods.
+      </p>
+      <p>
+        <strong>Booking is now open.</strong>
+        <a href="mailto:hello@stillground.co.uk">Email Jane</a> to reserve your place.
+        <a href="https://www.paypal.com/ncp/payment/EFTQLHYZ8B9WE">Pay via PayPal</a>.
       </p>
     </article>
 
