@@ -8,15 +8,16 @@ const base = import.meta.env.BASE_URL.endsWith("/")
 
 <BaseLayout
   title="Autumn and Winter Workshops | Still Ground"
-  description="Save the dates for Jane Aldiss's autumn and winter Nidra Nights, movement meditation, Monday practice group, and future day retreats in Aylsham, Norfolk."
+  description="Yoga Nidra Nights, movement and meditation, an introduction to Kundalini Yoga and the chakra system, and the Monday practice group in Aylsham, Norfolk."
+  showFounder={false}
 >
   <section class="page-title section-narrow">
     <p class="eyebrow">Save the dates</p>
     <h1>Autumn and winter workshop schedule</h1>
     <p class="lede">
-      Nidra Nights, movement, meditation, and relaxation with Jane
-      in Aylsham. Full booking details will follow closer to each session, but
-      you are welcome to register your interest now.
+      Yoga Nidra Nights, movement, meditation, and relaxation in Aylsham.
+      Booking is open for the first session. Full booking details for later
+      dates will follow closer to each session.
     </p>
   </section>
 
@@ -27,19 +28,15 @@ const base = import.meta.env.BASE_URL.endsWith("/")
     </p>
   </section>
 
-  <section class="feature-grid" aria-label="Autumn and winter workshop dates">
+  <section class="feature-grid workshop-grid" aria-label="Autumn and winter workshop dates">
     <article>
       <p class="small-label">Monthly Fridays</p>
-      <h3>Nidra Night</h3>
+      <h3>Yoga Nidra Night</h3>
       <p>
         A monthly evening of guided Yoga Nidra: deep, restorative rest for the
         nervous system.
       </p>
       <p><strong>Fridays, 6:00-8:00pm | 2 hours | &pound;25</strong></p>
-      <p>
-        <strong>Book Friday 6 November and Friday 4 December together for
-          &pound;40, saving &pound;10.</strong>
-      </p>
       <ul class="list-clean">
         <li>Friday 6 November</li>
         <li>Friday 4 December</li>
@@ -48,6 +45,11 @@ const base = import.meta.env.BASE_URL.endsWith("/")
         <li>Friday 5 March</li>
         <li>Friday 2 April</li>
       </ul>
+      <p>
+        Booking is now open for Friday 6 November.
+        <a href="mailto:hello@stillground.co.uk">Email Jane</a> to reserve your place.
+        Book 6 November and 4 December together for &pound;40, saving &pound;10.
+      </p>
     </article>
 
     <article>
@@ -60,14 +62,58 @@ const base = import.meta.env.BASE_URL.endsWith("/")
         discover the profound inner dimensions of this ancient yogic tradition,
         woven together with breathing practices, relaxation and meditation.
       </p>
-      <p><strong>Saturdays, 10:00am-1:00pm | 3 hours | &pound;25</strong></p>
+      <p><strong>Saturdays, 10:00am-1:00pm | 3 hours | &pound;35</strong></p>
       <ul class="list-clean">
         <li>Saturday 12 December</li>
         <li>Saturday 16 January</li>
         <li>Saturday 20 February</li>
-        <li>Saturday 20 March</li>
         <li>Saturday 17 April</li>
       </ul>
+    </article>
+
+    <article class="one-day-workshop">
+      <p class="small-label">One-day workshop</p>
+      <h3>Introduction to Kundalini Yoga: The Chakra System</h3>
+      <p>
+        A day exploring the chakras as a map of inner life, in the Yasodhara
+        tradition of Kundalini Yoga. Gentle teaching, movement, breathing,
+        relaxation and meditation. No experience needed.
+      </p>
+      <p>
+        In the Yasodhara tradition, Kundalini Yoga isn't about dramatic
+        techniques or forceful practices. It's a thoughtful, grounded path of
+        self-understanding, and the chakras are its map: seven centres of
+        awareness, each connected with different aspects of our lives, such as
+        security, creativity, will, love, communication, insight and spiritual
+        longing.
+      </p>
+      <p>
+        We'll look at what each chakra represents, the symbols and sounds
+        traditionally associated with it, and how these ideas can be used to
+        reflect on your own experience, habits, patterns and potential.
+        Alongside the teaching there will be movement, breathing, relaxation
+        and meditation, so the ideas are felt as well as understood.
+      </p>
+      <p>
+        This is not the Kundalini Yoga taught by Yogi Bhajan. It draws on the
+        approach developed at Yasodhara Ashram, which emphasises understanding,
+        reflection and ethical living alongside practice.
+      </p>
+      <p>
+        Jane trained at Yasodhara Ashram in Canada in 2016, completed the
+        Kundalini and Dream training in 2017, and has been teaching this work
+        ever since.
+      </p>
+      <p>
+        <strong>Saturday 20 March 2027 | 10am-5pm | &pound;100 including homemade
+          vegan lunch | &pound;90 early bird before 31 January 2027 | Aylsham,
+          Norfolk - address given on booking</strong>
+      </p>
+      <p>Limited to around eight people.</p>
+      <p>
+        Bring comfortable clothing, a notebook, and anything you need to be
+        comfortable sitting or lying down.
+      </p>
     </article>
 
     <article>
@@ -77,6 +123,20 @@ const base = import.meta.env.BASE_URL.endsWith("/")
         The free Awakening Dignity Meditation group continues as usual.
       </p>
       <p><strong>Mondays, 9:30-11:00am | Free</strong></p>
+      <p id="clocks-note" hidden>
+        The clocks go back on Sunday 25 October, so Monday's 9:30am start will
+        be GMT, not BST.
+      </p>
+      <script is:inline>
+        const note = document.getElementById("clocks-note");
+        const timeUntilExpiry = Date.parse("2026-10-27T00:00:00Z") - Date.now();
+        if (note && timeUntilExpiry > 0) {
+          note.hidden = false;
+          window.setTimeout(() => note.remove(), timeUntilExpiry);
+        } else {
+          note?.remove();
+        }
+      </script>
       <a href={`${base}awakening-dignity/`}>Read about the practice group</a>
     </article>
 
@@ -119,7 +179,7 @@ const base = import.meta.env.BASE_URL.endsWith("/")
     <div>
       <p class="eyebrow">Register interest</p>
       <h2>Email Jane if a date calls to you</h2>
-      <p>Full booking details will follow closer to each workshop.</p>
+      <p>Full booking details for later dates will follow closer to each session.</p>
     </div>
     <a class="button" href="mailto:hello@stillground.co.uk">Email Jane</a>
   </section>

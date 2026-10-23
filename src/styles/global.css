@@ -281,6 +281,18 @@ p {
   margin-bottom: 58px;
 }
 
+.workshop-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.workshop-grid .one-day-workshop {
+  grid-column: 1 / -1;
+}
+
+.workshop-grid .one-day-workshop p {
+  max-width: 75ch;
+}
+
 .offer-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }

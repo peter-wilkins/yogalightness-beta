@@ -8,6 +8,7 @@ interface Props {
   canonicalPath?: string;
   noindex?: boolean;
   image?: string;
+  showFounder?: boolean;
 }
 
 const {
@@ -16,6 +17,7 @@ const {
   canonicalPath,
   noindex = false,
   image = "/assets/social/still-ground-lotus.jpg",
+  showFounder = true,
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL.endsWith("/")
@@ -40,6 +42,7 @@ const imageUrl = new URL(image, `${siteUrl}/`).toString();
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta name="twitter:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={imageUrl} />
     <meta name="twitter:card" content="summary_large_image" />
@@ -50,10 +53,12 @@ const imageUrl = new URL(image, `${siteUrl}/`).toString();
       url: siteUrl,
       email: "hello@stillground.co.uk",
       areaServed: "North Norfolk",
-      founder: {
-        "@type": "Person",
-        name: "Jane Aldiss",
-      },
+      ...(showFounder ? {
+        founder: {
+          "@type": "Person",
+          name: "Jane Aldiss",
+        },
+      } : {}),
       makesOffer: [
         "One-to-one contemplative support",
         "Dreamwork sessions",
