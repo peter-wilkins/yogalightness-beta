@@ -8,7 +8,7 @@ const base = import.meta.env.BASE_URL.endsWith("/")
 
 <BaseLayout
   title="Awakening Dignity Practice Group"
-  description="A free weekly Aylsham and online practice group exploring dignity, compassion, meditation, and meaningful connection."
+  description="A free weekly Aylsham and online practice group exploring dignity, compassion, meditation, and meaningful connection. New members welcome until January."
 >
   <section class="hero">
     <div class="hero-copy">
@@ -16,8 +16,9 @@ const base = import.meta.env.BASE_URL.endsWith("/")
       <h1>Awakening Dignity Across the Globe</h1>
       <p class="lede">
         A six-month journey into inner dignity, compassion, and meaningful
-        connection, meeting weekly in Aylsham and online. The next local group
-        begins on Monday 19 October 2026.
+        connection, meeting weekly in Aylsham and online. The current local
+        group began on Monday 19 October 2026, and new participants are warmly
+        welcome to join up to month 3 (until mid-January 2027).
       </p>
       <div class="button-row">
         <a class="button" href="mailto:hello@stillground.co.uk">Ask Jane about joining</a>
@@ -49,27 +50,28 @@ const base = import.meta.env.BASE_URL.endsWith("/")
 
   <section class="split">
     <div>
-      <p class="eyebrow">Next cycle</p>
-      <h2>Starting again on Monday 19 October 2026</h2>
+      <p class="eyebrow">Now running</p>
+      <h2>Started 19 October 2026: you&rsquo;re welcome to join</h2>
       <p>
         Jane facilitates a local practice group for the Awakening Dignity
-        programme from the Samye Institute. The group will explore the programme
-        for a second time from Monday 19 October 2026.
+        programme from the Samye Institute. The group is exploring the programme
+        for a second time, having begun on Monday 19 October 2026.
       </p>
       <p>
-        The current group began in March 2026 and continues into October before
-        the next local group starts from the beginning.
+        It&rsquo;s not too late to join. New participants are welcome up to month 3
+        of the programme (until mid-January 2027), and Jane will help you catch
+        up with anything you&rsquo;ve missed.
       </p>
       <p>
-        If you are interested, getting in touch now gives you time to arrange
-        your schedule before the new group begins.
+        If you&rsquo;re interested, get in touch and Jane can explain how the group
+        works and whether the course is right for you.
       </p>
     </div>
     <div class="note-panel">
       <p class="small-label">Register interest</p>
       <p>
-        Email Jane if you would like to join the new October group or ask
-        whether the course is right for you.
+        Email Jane if you would like to join the group, or to ask whether the
+        course is right for you.
       </p>
       <a href="mailto:hello@stillground.co.uk">Email Jane</a>
     </div>
@@ -107,12 +109,26 @@ const base = import.meta.env.BASE_URL.endsWith("/")
     <div class="note-panel">
       <p class="small-label">Meeting details</p>
       <ul class="list-clean">
-        <li>Mondays, 9:30-11:00am GMT.</li>
+        <li>Mondays, 9:30-11:00am.</li>
+        <li id="awakening-clocks-note" hidden>
+          The clocks go back on Sunday 25 October, so from Monday 26 October
+          the 9:30am start is GMT, not BST.
+        </li>
         <li>Please arrive by 9:15am for a prompt start.</li>
-        <li>New course starts Monday 19 October 2026.</li>
+        <li>Course began Monday 19 October 2026. New members welcome until mid-January 2027.</li>
         <li>Aylsham, Norfolk, also available online.</li>
         <li>Bring a notebook and pen.</li>
       </ul>
+      <script is:inline>
+        const note = document.getElementById("awakening-clocks-note");
+        const timeUntilExpiry = Date.parse("2026-10-27T00:00:00Z") - Date.now();
+        if (note && timeUntilExpiry > 0) {
+          note.hidden = false;
+          window.setTimeout(() => note.remove(), timeUntilExpiry);
+        } else {
+          note?.remove();
+        }
+      </script>
     </div>
   </section>
 
@@ -167,7 +183,7 @@ const base = import.meta.env.BASE_URL.endsWith("/")
   <section class="contact-band">
     <div>
       <p class="eyebrow">Questions welcome</p>
-      <h2>Contact Jane before the first session</h2>
+      <h2>Contact Jane to join the group</h2>
       <p>Jane can explain the local group, online access, and the optional resources.</p>
     </div>
     <a class="button" href="mailto:hello@stillground.co.uk">Email Jane</a>
