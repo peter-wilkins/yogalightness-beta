@@ -120,13 +120,18 @@ const base = import.meta.env.BASE_URL.endsWith("/")
       <p id="kundalini-early-bird" hidden>&pound;90 early bird before 31 January 2027.</p>
       <script is:inline>
         const offer = document.getElementById("kundalini-early-bird");
-        const timeUntilOfferExpiry = Date.parse("2027-02-01T00:00:00Z") - Date.now();
-        if (offer && timeUntilOfferExpiry > 0) {
+        const offerExpiry = Date.parse("2027-02-01T00:00:00Z");
+        const updateOffer = () => {
+          if (!offer) return;
+          const remaining = offerExpiry - Date.now();
+          if (remaining <= 0) {
+            offer.remove();
+            return;
+          }
           offer.hidden = false;
-          window.setTimeout(() => offer.remove(), timeUntilOfferExpiry);
-        } else {
-          offer?.remove();
-        }
+          window.setTimeout(updateOffer, Math.min(remaining, 24 * 60 * 60 * 1000));
+        };
+        updateOffer();
       </script>
       <p>Aylsham, Norfolk. Address given on booking.</p>
       <p>Limited to around eight people.</p>
