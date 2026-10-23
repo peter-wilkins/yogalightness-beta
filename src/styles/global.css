@@ -419,6 +419,19 @@ p {
   margin-top: 18px;
 }
 
+.testimonial-grid--schedule {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.testimonial-grid--schedule blockquote:last-child {
+  grid-column: 1 / -1;
+}
+
+.testimonial-grid--schedule blockquote:last-child p,
+.testimonial-grid--schedule blockquote:last-child cite {
+  max-width: 65ch;
+}
+
 .testimonial-section blockquote p {
   color: var(--heading);
   font-family: Georgia, "Times New Roman", serif;
