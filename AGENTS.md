@@ -1,6 +1,6 @@
 # Agent Instructions
 
-This repo is the live website for Jane Aldiss / Still Ground.
+This repo is the live website for Jane / Still Ground.
 
 ## Role
 

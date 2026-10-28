@@ -225,6 +225,7 @@ p {
   min-height: 46px;
   align-items: center;
   justify-content: center;
+  text-align: center;
   padding: 0 18px;
   border: 1px solid var(--green);
   background: var(--green);

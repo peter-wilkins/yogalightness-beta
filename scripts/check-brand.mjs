@@ -1,5 +1,5 @@
 import { readFileSync } from "node:fs";
-import { relative } from "node:path";
+import { extname, relative } from "node:path";
 import { globSync } from "node:fs";
 
 const forbidden = [
@@ -24,6 +24,24 @@ for (const file of files) {
     if (pattern.test(body)) {
       failures.push(`${relative(process.cwd(), file)} matches ${pattern}`);
     }
+  }
+}
+
+const publicFiles = globSync("{AGENTS.md,README.md,src/**/*,public/**/*}", {
+  nodir: true,
+});
+const privateSurname = new RegExp(["Ald", "iss"].join(""), "i");
+const longerFirstName = new RegExp(["Jane", "Catherine"].join(""), "i");
+const textExtensions = new Set([".astro", ".css", ".html", ".js", ".json", ".md", ".mjs", ".ts", ".txt", ".xml"]);
+
+for (const file of publicFiles) {
+  if (privateSurname.test(file) || longerFirstName.test(file)) {
+    failures.push(`${file} contains a private name in its path`);
+  }
+  if (!textExtensions.has(extname(file))) continue;
+  const body = readFileSync(file, "utf8");
+  if (privateSurname.test(body) || longerFirstName.test(body)) {
+    failures.push(`${file} contains a private name`);
   }
 }
 

@@ -13,7 +13,7 @@ interface Props {
 
 const {
   title = "Still Ground | North Norfolk",
-  description = "One-to-one contemplative support, spacious retreats, meditation days, and solo practice space with Jane Aldiss in North Norfolk.",
+  description = "One-to-one contemplative support, spacious retreats, meditation days, and solo practice space with Jane in North Norfolk.",
   canonicalPath,
   noindex = false,
   image = "/assets/social/still-ground-lotus.jpg",
@@ -56,7 +56,7 @@ const imageUrl = new URL(image, `${siteUrl}/`).toString();
       ...(showFounder ? {
         founder: {
           "@type": "Person",
-          name: "Jane Aldiss",
+          name: "Jane",
         },
       } : {}),
       makesOffer: [

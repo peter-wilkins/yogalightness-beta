@@ -1,6 +1,6 @@
 # Still Ground
 
-The live Still Ground website for Jane Aldiss.
+The live Still Ground website for Jane.
 
 ## Commands
 

@@ -109,26 +109,13 @@ const base = import.meta.env.BASE_URL.endsWith("/")
     <div class="note-panel">
       <p class="small-label">Meeting details</p>
       <ul class="list-clean">
-        <li>Mondays, 9:30-11:00am.</li>
-        <li id="awakening-clocks-note" hidden>
-          The clocks go back on Sunday 25 October, so from Monday 26 October
-          the 9:30am start is GMT, not BST.
-        </li>
+        <li>Mondays, 9:30-11:00am GMT.</li>
+        <li>No group on Monday 16 November.</li>
         <li>Please arrive by 9:15am for a prompt start.</li>
         <li>Course began Monday 19 October 2026. New members welcome until mid-January 2027.</li>
         <li>Aylsham, Norfolk, also available online.</li>
         <li>Bring a notebook and pen.</li>
       </ul>
-      <script is:inline>
-        const note = document.getElementById("awakening-clocks-note");
-        const timeUntilExpiry = Date.parse("2026-10-27T00:00:00Z") - Date.now();
-        if (note && timeUntilExpiry > 0) {
-          note.hidden = false;
-          window.setTimeout(() => note.remove(), timeUntilExpiry);
-        } else {
-          note?.remove();
-        }
-      </script>
     </div>
   </section>
 
