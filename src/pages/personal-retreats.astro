@@ -25,16 +25,17 @@ const base = import.meta.env.BASE_URL.endsWith("/")
         <a class="button secondary" href={`${base}work-with-jane/`}>Meet Jane</a>
       </div>
     </div>
-    <figure class="hero-media image-contain">
-      <img
-        src={`${base}assets/personal-retreats/beach-retreat.webp`}
-        alt="Open beach, sea, and sky for a spacious personal retreat"
-        width="760"
-        height="570"
-        decoding="async"
-        fetchpriority="high"
-      />
-      <figcaption>A spacious weekend in Norfolk, with beach and rural walks available</figcaption>
+    <figure class="hero-media retreat-home">
+      <picture>
+        <img
+          src={`${base}assets/personal-retreats/sitting-room.webp`}
+          alt="Jane's sitting room prepared for quiet meditation and rest"
+          width="1600"
+          height="1200"
+          fetchpriority="high"
+        />
+      </picture>
+      <figcaption>A peaceful place to settle in</figcaption>
     </figure>
   </section>
 
@@ -94,6 +95,17 @@ const base = import.meta.env.BASE_URL.endsWith("/")
         <li>Time outdoors, including countryside or coastal walks if you enjoy them.</li>
         <li>Robe, slippers, herbal teas, and space to feel at home.</li>
       </ul>
+      <figure class="retreat-room-photo">
+        <img
+          src={`${base}assets/personal-retreats/guest-bedroom.webp`}
+          alt="Private guest bedroom with garden view and ensuite access"
+          width="1600"
+          height="1200"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>The private guest bedroom</figcaption>
+      </figure>
     </div>
     <div class="price-panel">
       <p class="small-label">Investment</p>
@@ -161,6 +173,17 @@ const base = import.meta.env.BASE_URL.endsWith("/")
       mindfulness outdoors. As with everything else over the weekend, we can
       shape this around you, your interests and what feels right.
     </p>
+    <figure class="retreat-room-photo retreat-room-photo--dining">
+      <img
+        src={`${base}assets/personal-retreats/dining-room.webp`}
+        alt="Flowers on the dining table at Jane's home"
+        width="1200"
+        height="1600"
+        loading="lazy"
+        decoding="async"
+      />
+      <figcaption>Time to share a home-cooked meal</figcaption>
+    </figure>
   </section>
 
   <section class="section testimonial-section">

@@ -161,6 +161,15 @@ main {
   object-position: 65% center;
 }
 
+.hero-media.retreat-home {
+  aspect-ratio: 4 / 3;
+  min-height: 0;
+}
+
+.hero-media.retreat-home img {
+  object-fit: cover;
+}
+
 .hero-media figcaption,
 .image-panel figcaption {
   position: absolute;
@@ -378,6 +387,31 @@ p {
 
 .gallery-grid figcaption {
   padding: 10px 12px 12px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.retreat-room-photo {
+  max-width: 720px;
+  margin: 24px 0 0;
+}
+
+.retreat-room-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.retreat-room-photo--dining img {
+  max-height: 540px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 48%;
+}
+
+.retreat-room-photo figcaption {
+  margin-top: 8px;
   color: var(--muted);
   font-size: 0.92rem;
 }
