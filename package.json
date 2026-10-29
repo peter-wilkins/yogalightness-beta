@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "test": "node scripts/check-brand.mjs",
+    "test": "node scripts/check-brand.mjs && node --test tests/*.test.mjs",
     "preview": "astro preview"
   },
   "dependencies": {

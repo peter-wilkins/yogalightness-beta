@@ -8,16 +8,17 @@ const base = import.meta.env.BASE_URL.endsWith("/")
 
 <BaseLayout
   title="Learn to Meditate in a Weekend | Still Ground"
-  description="A private, structured weekend introduction to meditation with Jane in Aylsham, North Norfolk."
+  description="A private meditation weekend shaped around you, with four individual teaching sessions and a practice for everyday life, with Jane in Aylsham, North Norfolk."
 >
   <section class="hero">
     <div class="hero-copy">
       <p class="eyebrow">A private weekend introduction</p>
       <h1>Learn to meditate in a weekend</h1>
       <p class="lede">
-        A private, structured introduction to meditation held over a weekend at
-        Jane's home in Aylsham, North Norfolk. Buddhist-informed but without
-        doctrine or dogma: no beliefs required, no previous experience necessary.
+        A private introduction to meditation held over a weekend at Jane's home
+        in Aylsham, North Norfolk. The teaching and rhythm are shaped around
+        you. Buddhist-informed but without doctrine or dogma: no beliefs
+        required, no previous experience necessary.
       </p>
       <div class="button-row">
         <a class="button" href="mailto:hello@stillground.co.uk">Ask Jane about a weekend</a>
@@ -48,8 +49,8 @@ const base = import.meta.env.BASE_URL.endsWith("/")
     <article>
       <h3>Private teaching</h3>
       <p>
-        Three one-to-one teaching sessions across Friday evening, Saturday, and
-        Sunday, with guided sits morning and evening.
+        Four individual meditation teaching sessions across the weekend, shaped
+        around your needs, experience and interests.
       </p>
     </article>
     <article>
@@ -74,10 +75,10 @@ const base = import.meta.env.BASE_URL.endsWith("/")
       <h2>A complete weekend container</h2>
       <ul class="list-clean">
         <li>Private ensuite room for the weekend.</li>
-        <li>Three one-to-one teaching sessions.</li>
-        <li>Guided sits morning and evening.</li>
+        <li>Four individual meditation teaching sessions.</li>
+        <li>Guided sits and time to practise at a pace that suits you.</li>
         <li>Nourishing home-cooked vegan, gluten-free meals throughout.</li>
-        <li>A guided walk through National Trust parkland or along the Norfolk coast.</li>
+        <li>Time for a walk along the coast or through North Norfolk countryside, if you enjoy walking.</li>
         <li>Spacious unstructured time to rest, walk, journal, or simply be.</li>
         <li>A written summary of your personal practice to take home.</li>
         <li>A follow-up conversation two weeks after your return.</li>
@@ -85,39 +86,71 @@ const base = import.meta.env.BASE_URL.endsWith("/")
     </div>
     <div class="price-panel">
       <p class="small-label">Investment</p>
-      <strong>Price on application</strong>
-      <p>Contact Jane to discuss the price and what is included.</p>
+      <div id="meditation-intro-offer" hidden>
+        <p class="small-label">Introductory offer</p>
+        <strong>&pound;775</strong>
+        <p>For bookings completed by 31 March 2027.</p>
+      </div>
+      <p>Standard price: <b>&pound;875</b></p>
       <p>A free 20-minute conversation is offered before booking.</p>
     </div>
   </section>
 
+  <script is:inline>
+    const offer = document.getElementById("meditation-intro-offer");
+    const offerExpiry = Date.parse("2027-04-01T00:00:00+01:00");
+    const updateOffer = () => {
+      if (!offer) return;
+      const remaining = offerExpiry - Date.now();
+      if (remaining <= 0) {
+        offer.remove();
+        return;
+      }
+      offer.hidden = false;
+      window.setTimeout(updateOffer, Math.min(remaining, 24 * 60 * 60 * 1000));
+    };
+    updateOffer();
+  </script>
+
   <section class="section">
     <p class="eyebrow">The shape of the weekend</p>
-    <h2>Simple, steady, and spacious</h2>
+    <h2>Simple, steady, and shaped around you</h2>
+    <p>
+      This is a possible outline, not a fixed timetable. The four teaching
+      sessions and the overall rhythm are shaped around your needs, experience
+      and interests, so your practice can fit into everyday life.
+    </p>
     <div class="schedule">
       <article>
         <h3>Friday from 4pm</h3>
         <p>
-          Arrive, settle in, share a welcome supper, have an introductory
-          conversation, and take a short first sit.
+          Arrive, settle in and share a welcome supper. We can talk about what
+          you hope to explore and begin with a short sit.
         </p>
       </article>
       <article>
         <h3>Saturday</h3>
         <p>
-          Morning sit, breakfast, first full teaching session, spacious
-          afternoon, evening teaching session, and shared dinner.
+          There is time for personal teaching, practice, rest and a shared
+          dinner. We will shape the day together rather than follow a rigid
+          schedule.
         </p>
       </article>
       <article>
         <h3>Sunday</h3>
         <p>
-          Morning sit, breakfast, final teaching session to consolidate your
-          practice and build your daily routine, then light lunch and departure
-          when you are ready.
+          We can consolidate what you have learned and make a daily practice
+          that works for you, with lunch and departure when you are ready.
         </p>
       </article>
     </div>
+    <p>
+      There may be time for a walk along the coast or through the beautiful North
+      Norfolk countryside. If you enjoy walking, we can make this part of our
+      time together, using it as another opportunity to explore awareness and
+      mindfulness outdoors. As with everything else over the weekend, it's
+      something we can shape around you, your interests and what feels right.
+    </p>
   </section>
 
   <section class="section section-narrow">
