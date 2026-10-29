@@ -1,6 +1,6 @@
 ---
 title: "Site Notes"
-tldr: "The site uses Jane's retreat and contemplative support copy, shaped into a calm first version."
+tldr: "The site brings Jane's teaching, group and retreat offerings together."
 description: "Internal notes for the Still Ground site."
 date: "2026-05-30"
 draft: true
@@ -12,7 +12,7 @@ Jane's writing.
 
 The current shape focuses on three clear offerings:
 
-- one-to-one contemplative companionship and clarity sessions
+- one-to-one yoga, meditation, relaxation and dreamwork sessions
 - spacious personal retreats in North Norfolk
 - The Retreat, a tiny solo retreat cabin for self-retreat
 

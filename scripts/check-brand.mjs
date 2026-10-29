@@ -10,6 +10,10 @@ const forbidden = [
   /mailto:[^"'\s>]*(gmail|googlemail)\.com/i,
   /[A-Z0-9._%+-]+@(gmail|googlemail)\.com/i,
   /Public beta/i,
+  /end[ -]of[ -]life|life transition|wellbeing and clarity|companionship|Compassionate Companion/i,
+  /forty years of practice|40 years/i,
+  /Movement, Meditation and Relaxation/i,
+  /(?<!Yoga )Nidra Nights?\b/i,
 ];
 
 const files = globSync("{AGENTS.md,src/**/*.{astro,md,ts,js,css}}", {
