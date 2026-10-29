@@ -8,16 +8,17 @@ const base = import.meta.env.BASE_URL.endsWith("/")
 
 <BaseLayout
   title="Personal Retreats | Still Ground"
-  description="Spacious one-to-one weekend retreats with Jane in Aylsham, North Norfolk."
+  description="A private weekend retreat for one guest at a time in Jane's North Norfolk home, with personal attention, gentle practice and space to rest."
 >
   <section class="hero">
     <div class="hero-copy">
       <p class="eyebrow">One guest at a time</p>
-      <h1>Spacious weekend retreats</h1>
+      <h1>A weekend that is yours</h1>
       <p class="lede">
-        A private North Norfolk retreat built around rest, reflection, nourishing
-        food, meditation, and the rare permission to step off the treadmill and
-        simply be.
+        Come and spend a peaceful weekend with me in my North Norfolk home.
+        This is a private retreat for one guest at a time, shaped around what
+        you need. There is room to rest, reflect, practise or simply be, without
+        pressure to achieve anything.
       </p>
       <div class="button-row">
         <a class="button" href="mailto:hello@stillground.co.uk">Enquire</a>
@@ -39,71 +40,149 @@ const base = import.meta.env.BASE_URL.endsWith("/")
 
   <section class="statement">
     <p>
-      Rather than packed programming, these retreats are built around spaciousness
-      itself. A few daily anchor points create rhythm. Most of the time remains
-      yours.
+      You do not have to follow a programme or take part in everything. We can
+      find a gentle rhythm together, with plenty of time that is entirely your
+      own.
     </p>
   </section>
 
   <section class="feature-grid" aria-label="What makes the retreat different">
     <article>
-      <h3>Complete privacy</h3>
-      <p>One guest at a time, with personalised attention and no group dynamic.</p>
+      <h3>Just you</h3>
+      <p>One guest at a time, in my own home, with privacy and personal attention.</p>
     </article>
     <article>
-      <h3>60-70% unstructured time</h3>
-      <p>Walk, rest, read, nap, journal, sit, or do absolutely nothing.</p>
+      <h3>Your own pace</h3>
+      <p>There is no rigid timetable. Walk, rest, read, journal or do nothing at all.</p>
     </article>
     <article>
-      <h3>Held by lived wisdom</h3>
-      <p>Jane brings decades of meditation, yoga, healing, and deep listening.</p>
+      <h3>Care without pressure</h3>
+      <p>I can offer guidance and company when you want them, and quiet when you need space.</p>
     </article>
+  </section>
+
+  <section class="section section-narrow">
+    <h2>Here, as you are</h2>
+    <p>
+      I have spent decades with meditation, yoga, healing and deep listening.
+      Those experiences inform how I welcome people, but I am more interested in
+      you than in fitting you into an idea of what a retreat should be. We can
+      talk, practise or spend time together when that helps, and I will respect
+      your privacy and independence when you want to be alone.
+    </p>
+    <p>
+      My hope is that you feel comfortable enough to slow down and reconnect
+      with yourself. You bring yourself, just as you are; I will bring my
+      attention and care.
+    </p>
   </section>
 
   <section class="split">
     <div>
       <p class="eyebrow">Included</p>
-      <h2>A gentle container</h2>
+      <h2>Make yourself at home</h2>
+      <p>
+        You will have a private ensuite room, home-cooked meals and a welcoming
+        place to settle. Meditation and gentle movement are there if they feel
+        right for you, balanced by time to rest, read, reflect or simply be.
+      </p>
       <ul class="list-clean">
         <li>Private ensuite room in a peaceful North Norfolk home.</li>
-        <li>Fabulous vegan, gluten-free meals prepared with care.</li>
-        <li>Morning meditation, with optional evening practice.</li>
+        <li>Home-cooked vegan, gluten-free meals prepared with care.</li>
+        <li>Optional morning meditation and evening practice.</li>
         <li>Optional gentle stretches or movement.</li>
-        <li>Nature walks through countryside, parks, or coastline.</li>
+        <li>Time outdoors, including countryside or coastal walks if you enjoy them.</li>
         <li>Robe, slippers, herbal teas, and space to feel at home.</li>
       </ul>
     </div>
     <div class="price-panel">
       <p class="small-label">Investment</p>
-      <strong>£975</strong>
+      <div id="retreat-intro-offer" hidden>
+        <p class="small-label">Introductory offer</p>
+        <strong>&pound;775</strong>
+        <p>For bookings completed by 31 March 2027.</p>
+      </div>
+      <p>Standard price: <b>&pound;875</b></p>
       <p>All-inclusive weekend retreat, Friday 4pm to Sunday 4pm.</p>
       <p>Location: Aylsham, North Norfolk.</p>
       <p>Vegan and gluten-free. Other dietary needs accommodated with notice.</p>
     </div>
   </section>
 
+  <script is:inline>
+    const offer = document.getElementById("retreat-intro-offer");
+    const offerExpiry = Date.parse("2027-04-01T00:00:00+01:00");
+    const updateOffer = () => {
+      if (!offer) return;
+      const remaining = offerExpiry - Date.now();
+      if (remaining <= 0) {
+        offer.remove();
+        return;
+      }
+      offer.hidden = false;
+      window.setTimeout(updateOffer, Math.min(remaining, 24 * 60 * 60 * 1000));
+    };
+    updateOffer();
+  </script>
+
   <section class="section">
     <p class="eyebrow">Sample rhythm</p>
     <h2>A weekend with room to breathe</h2>
+    <p>
+      This is a possible shape, not a timetable you have to keep. We can choose
+      together what feels most nourishing, and there will always be time that
+      is simply yours.
+    </p>
     <div class="schedule">
       <article>
         <h3>Friday evening</h3>
-        <p>Arrive, settle in, share a welcome supper, then move into quiet.</p>
+        <p>Arrive, settle in and share a welcome supper. There is no need to rush into anything.</p>
       </article>
       <article>
         <h3>Saturday</h3>
         <p>
-          Morning meditation and breakfast, followed by a spacious day of rest,
-          walking, reading, journaling, and a shared dinner.
+          We might meditate, move gently or go outside. You can also rest,
+          read, journal or spend the day quietly. We will share a home-cooked
+          dinner in the evening.
         </p>
       </article>
       <article>
         <h3>Sunday</h3>
         <p>
-          Morning meditation, breakfast, free time, light lunch, a short closing
-          reflection, and departure when you are ready.
+          There is room for another practice or a quiet morning, followed by
+          breakfast, a light lunch and departure when you are ready.
         </p>
       </article>
+    </div>
+    <p>
+      There may be time to walk along the coast or through the beautiful North
+      Norfolk countryside. If you enjoy walking, we can make this part of our
+      time together, using it as another opportunity to explore awareness and
+      mindfulness outdoors. As with everything else over the weekend, we can
+      shape this around you, your interests and what feels right.
+    </p>
+  </section>
+
+  <section class="section testimonial-section">
+    <h2>Kind words from guests and participants</h2>
+    <p>These words come from meditation teaching and earlier weekends, not from this personal retreat.</p>
+    <div class="testimonial-grid">
+      <blockquote>
+        <p>
+          Jane is lovely and tries to tailor the weekend to your specific desire.
+          The food was delicious. The accommodations were clean and comfortable.
+          I really liked the meditation aspect of the weekend.
+        </p>
+        <cite>Marta K., Canada - meditation weekend guest, 14 May 2019</cite>
+      </blockquote>
+      <blockquote>
+        <p>
+          I had no experience of meditating at the outset, but I need not have
+          worried. Jane guides with kindness and insight. It has been fascinating
+          getting to know myself and learning to be quietly at one with myself.
+        </p>
+        <cite>Paula - Awakening Dignity participant, 2026</cite>
+      </blockquote>
     </div>
   </section>
 
@@ -111,7 +190,10 @@ const base = import.meta.env.BASE_URL.endsWith("/")
     <div>
       <p class="eyebrow">Fit matters</p>
       <h2>A pre-retreat conversation is always offered</h2>
-      <p>Jane will help you decide whether this is the right experience for you.</p>
+      <p>
+        Tell me what you are hoping for. We can talk before you decide whether
+        this is the right experience for you.
+      </p>
     </div>
     <a class="button" href="mailto:hello@stillground.co.uk">Email Jane</a>
   </section>
