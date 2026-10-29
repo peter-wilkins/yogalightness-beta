@@ -50,6 +50,13 @@ for (const file of publicFiles) {
   }
 }
 
+const homepage = readFileSync("src/pages/index.astro", "utf8");
+const styles = readFileSync("src/styles/global.css", "utf8");
+if (!homepage.includes('class="hero-media home-lotus"') ||
+    !/\.hero-media\.home-lotus img\s*\{[^}]*object-fit:\s*cover/s.test(styles)) {
+  failures.push("Homepage lotus image must fill its hero frame without letterboxing");
+}
+
 if (failures.length) {
   console.error("Stale or private public-site text found:");
   for (const failure of failures) console.error(`- ${failure}`);

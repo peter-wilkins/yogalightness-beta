@@ -151,6 +151,16 @@ main {
   object-fit: contain;
 }
 
+.hero-media.home-lotus {
+  aspect-ratio: 4 / 3;
+  min-height: 300px;
+}
+
+.hero-media.home-lotus img {
+  object-fit: cover;
+  object-position: 65% center;
+}
+
 .hero-media figcaption,
 .image-panel figcaption {
   position: absolute;
@@ -605,6 +615,7 @@ p {
   }
 
   .hero {
+    grid-template-columns: minmax(0, 1fr);
     min-height: auto;
     padding-top: 10px;
   }
@@ -617,6 +628,11 @@ p {
 
   .hero-media.image-contain {
     min-height: 300px;
+  }
+
+  .hero-media.home-lotus {
+    aspect-ratio: 1;
+    min-height: 0;
   }
 
   .hero-media.image-contain picture {
