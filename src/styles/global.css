@@ -619,6 +619,10 @@ p {
     min-height: 300px;
   }
 
+  .hero-media.image-contain picture {
+    height: auto;
+  }
+
   h1 {
     font-size: 3.1rem;
   }

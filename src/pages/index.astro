@@ -6,15 +6,16 @@ const base = import.meta.env.BASE_URL.endsWith("/")
   : `${import.meta.env.BASE_URL}/`;
 ---
 
-<BaseLayout>
+<BaseLayout description="Yoga Nidra, yoga, meditation and dreamwork in Aylsham, North Norfolk and online, with Jane. Small groups, one-to-one sessions, personal retreats and a self-catering cabin.">
   <section class="hero">
     <div class="hero-copy">
       <p class="eyebrow">Still Ground in North Norfolk</p>
       <h1>Still Ground</h1>
+      <p class="retreat-tagline">Yoga Nidra, yoga, meditation, dreamwork and time away, in Aylsham, North Norfolk and online.</p>
       <p class="lede">
-        Jane teaches yoga, meditation, relaxation and dreamwork in small groups
-        in Aylsham and one to one, online or in person. Her approach is personal,
-        spacious, and welcoming to beginners and experienced practitioners.
+        I teach yoga, Yoga Nidra, meditation and dreamwork, in small groups, one
+        to one, and on private retreats, in Aylsham, North Norfolk, and online.
+        Beginners are welcome, and so are people who&rsquo;ve practised for years.
       </p>
       <div class="button-row">
         <a class="button" href={`${base}work-with-jane/`}>Explore one-to-one sessions</a>
@@ -23,17 +24,11 @@ const base = import.meta.env.BASE_URL.endsWith("/")
     </div>
     <figure class="hero-media image-contain">
       <picture>
-        <source
-          srcset={`${base}assets/home/spacious-beach-640.webp 640w, ${base}assets/home/spacious-beach-900.webp 900w, ${base}assets/home/spacious-beach-1500.webp 1500w`}
-          sizes="(max-width: 860px) 100vw, 54vw"
-          type="image/webp"
-        />
         <img
-          src={`${base}assets/home/spacious-beach-900.webp`}
-          alt="An open North Norfolk beach beneath a wide sky"
-          width="900"
-          height="675"
-          decoding="async"
+          src={`${base}assets/home/lotus-home.jpg`}
+          alt="Pink lotus in bloom on a pond"
+          width="3000"
+          height="1993"
           fetchpriority="high"
         />
       </picture>
@@ -42,109 +37,83 @@ const base = import.meta.env.BASE_URL.endsWith("/")
 
   <section class="statement" aria-label="Core promise">
     <p>
-      Meditation does not need to be solitary or one-size-fits-all. Jane creates
-      grounded spaces where people can learn and practise together, or receive
-      individual guidance shaped around what they need.
+      These practices give you time and space to discover what they can do for
+      you, whether you join a small group or work with me one to one.
     </p>
   </section>
 
-  <section class="offer-grid" aria-label="Current offerings">
-    <h2 class="sr-only">Current offerings</h2>
+  <section class="section" aria-label="What's coming up">
+    <h2>What&rsquo;s coming up</h2>
+    <div class="offer-grid">
     <article>
-      <p class="small-label">Save the dates</p>
-      <h3>Autumn and winter workshops</h3>
+      <h3>Yoga Nidra Night</h3>
       <p>
-        Yoga Nidra Nights, the Hidden Language of Hatha Yoga, the Kundalini Yoga
-        day, the Monday group, and future day retreats for the coming months.
+        Fridays, 6-8pm, from 6 November. You lie down on a warm floor and I
+        guide you into deep relaxation. You stay awake, but profoundly relaxed.
       </p>
-      <a href={`${base}autumn-winter-workshops/`}>See the workshop schedule</a>
     </article>
     <article>
-      <p class="small-label">Past event</p>
-      <h3>A day of meditation and relaxation</h3>
+      <h3>The Hidden Language of Hatha Yoga</h3>
       <p>
-        A small, nourishing day in Aylsham with meditation, gentle accessible
-        yoga, breathing practices, Yoga Nidra, vegan lunch, refreshments, and
-        spacious time to rest.
+        Saturday mornings, from 12 December. The symbolism and hidden meanings
+        behind traditional yoga practices, with breathing, relaxation and meditation.
       </p>
-      <a href={`${base}day-retreat/`}>Read the day retreat details</a>
     </article>
     <article>
-      <p class="small-label">Private weekend</p>
-      <h3>Learn to meditate</h3>
+      <h3>Introduction to Kundalini Yoga</h3>
       <p>
-        A private, structured weekend introduction in Aylsham for one guest:
-        Buddhist-informed, personal, and suitable for complete beginners.
+        A day on Saturday 20 March. Reflective study of the chakra system as a
+        map of inner life, in the Yasodhara tradition.
       </p>
-      <a href={`${base}learn-to-meditate/`}>See the meditation weekend</a>
     </article>
     <article>
-      <p class="small-label">Free weekly group</p>
-      <h3>Awakening Dignity practice group</h3>
+      <h3>Monday meditation group</h3>
       <p>
-        A six-month Monday morning journey into dignity, compassion, meditation,
-        contemplation, and meaningful connection. Available in Aylsham and
-        online.
+        Free, weekly, in Aylsham and online. New members are welcome until
+        mid-January.
       </p>
-      <a href={`${base}awakening-dignity/`}>Explore the practice group</a>
     </article>
+    <article>
+      <h3>Day retreats</h3>
+      <p>
+        A full day of meditation, movement, breathing and Yoga Nidra, with a
+        homemade vegan lunch. I hold a few each year, and dates will follow.
+      </p>
+    </article>
+    </div>
+    <a class="button" href={`${base}autumn-winter-workshops/`}>See the full schedule</a>
   </section>
 
   <section class="section section-narrow">
-    <p class="eyebrow">With Jane</p>
-    <h2>Presence without performance</h2>
+    <h2>Learn to meditate</h2>
     <p>
-      Jane has taught yoga since 1999 and meditated daily since 2007. She offers
-      space for people to discover what yoga, meditation, relaxation and
-      dreamwork can bring to their own lives.
+      A structured introductory weekend in Aylsham, for one person at a time.
+      It&rsquo;s suitable for complete beginners.
+    </p>
+    <a href={`${base}learn-to-meditate/`}>See the meditation weekend</a>
+  </section>
+
+  <section class="section section-narrow">
+    <h2>One to one</h2>
+    <p>
+      Private sessions in yoga, meditation and relaxation, or in dreamwork.
+      They&rsquo;re shaped around you, and take place online or in person.
+    </p>
+    <p>
+      <a href={`${base}work-with-jane/`}>Explore one-to-one sessions</a> &middot;
+      <a href={`${base}dreamwork/`}>Read about dreamwork</a>
     </p>
   </section>
 
-  <section class="feature-grid" aria-label="Ways to work with Jane">
-    <article>
-      <p class="small-label">One-to-one</p>
-      <h3>Yoga, meditation and relaxation</h3>
-      <p>
-        Private sessions shaped around you, online worldwide or in person in
-        North Norfolk. Go at your own pace.
-      </p>
-      <a href={`${base}work-with-jane/`}>Explore one-to-one sessions</a>
-    </article>
-    <article>
-      <p class="small-label">Dreamwork</p>
-      <h3>What dreams are carrying</h3>
-      <p>
-        Gentle one-to-one exploration of dreams, symbols, recurring images, and
-        the meaning that wants to emerge from within you.
-      </p>
-      <a href={`${base}dreamwork/`}>Read about dreamwork</a>
-    </article>
-    <article>
-      <p class="small-label">Immersive</p>
-      <h3>Private weekends</h3>
-      <p>
-        Personal retreats and a structured learn-to-meditate weekend, both
-        private and held one guest at a time in Aylsham.
-      </p>
-    </article>
-    <article>
-      <p class="small-label">Solo practice</p>
-      <h3>The Retreat</h3>
-      <p>
-        A tiny, self-catering practice cabin near Aylsham for solo retreat
-        stays of 5 to 28 nights.
-      </p>
-    </article>
+  <section class="section section-narrow">
+    <h2>Time away</h2>
   </section>
-
   <section class="retreat-feature">
     <div class="soft-panel">
-      <p class="eyebrow">The personal retreat</p>
-      <h2>A weekend shaped around spaciousness</h2>
+      <h3>Personal retreats</h3>
       <p>
-        One guest at a time. A few gentle anchor points create rhythm, while most
-        of the weekend remains yours: walking, resting, journaling, sleeping, or
-        doing absolutely nothing.
+        A weekend for one person, with a few anchor points and plenty of time
+        for walking, resting, journaling, or doing nothing.
       </p>
       <a class="button" href={`${base}personal-retreats/`}>Explore personal retreats</a>
     </div>
@@ -163,12 +132,12 @@ const base = import.meta.env.BASE_URL.endsWith("/")
 
   <section class="split">
     <div>
-      <p class="eyebrow">The Retreat</p>
-      <h2>Tiny, private, and intentionally simple</h2>
+      <h3>The Retreat</h3>
       <p>
-        A tiny private cabin in rural Norfolk for solo retreat guests. It is
-        small by design: a contained, quiet, self-catering place for sitting,
-        simplifying, and being with practice.
+        A small self-catering cabin near Aylsham, for solo guests staying 5 to
+        28 nights. There&rsquo;s no WiFi and no TV, and mobile signal is limited,
+        so you may need to go to the top of the garden for it. It&rsquo;s close
+        to Itteringham, Blickling Hall, Aylsham and the North Norfolk coast.
       </p>
       <a class="button secondary" href={`${base}retreatcottage/`}>See retreat details</a>
     </div>
@@ -180,11 +149,24 @@ const base = import.meta.env.BASE_URL.endsWith("/")
     </div>
   </section>
 
+  <section class="section section-narrow">
+    <h2>A little about me</h2>
+    <p>
+      Holding space for people to experience the joy of their own discovery is
+      deeply fulfilling. I&rsquo;ve taught yoga since 1999, and meditated every
+      day since 2007.
+    </p>
+    <a href={`${base}work-with-jane/`}>Read more about me</a>
+  </section>
+
   <section class="contact-band" id="contact">
     <div>
-      <p class="eyebrow">Begin gently</p>
-      <h2>A free 20-minute introductory call is available</h2>
-      <p>No preparation needed. Just come as you are.</p>
+      <h2>Begin gently</h2>
+      <p>
+        If you&rsquo;re not sure where to start, book a free 20-minute
+        introductory call. There&rsquo;s nothing to prepare. Tell me what
+        you&rsquo;re looking for, and we&rsquo;ll see what suits you.
+      </p>
     </div>
     <a class="button" href="mailto:hello@stillground.co.uk">Email Jane</a>
   </section>

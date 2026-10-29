@@ -14,6 +14,7 @@ const forbidden = [
   /forty years of practice|40 years/i,
   /Movement, Meditation and Relaxation/i,
   /(?<!Yoga )Nidra Nights?\b/i,
+  /Reiki|Presence without performance|forty years/i,
 ];
 
 const files = globSync("{AGENTS.md,src/**/*.{astro,md,ts,js,css}}", {
