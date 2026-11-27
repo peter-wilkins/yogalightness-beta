@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import hathaYogaImage from "../assets/hidden-language-hatha-yoga.webp?url";
 
 const base = import.meta.env.BASE_URL.endsWith("/")
   ? import.meta.env.BASE_URL
@@ -104,6 +105,16 @@ const base = import.meta.env.BASE_URL.endsWith("/")
     <article>
       <p class="small-label">Monthly Saturdays</p>
       <h3>The Hidden Language of Hatha Yoga: Symbols, Secrets and Metaphors</h3>
+      <figure class="workshop-image">
+        <img
+          src={hathaYogaImage}
+          alt="Bronze statue of Shiva dancing beside a pink lotus and a rolled yoga mat"
+          width="1200"
+          height="800"
+          loading="lazy"
+          decoding="async"
+        />
+      </figure>
       <p>
         An exploration of the deeper layers of Hatha Yoga &mdash; the symbolism,
         subtle energies and hidden meanings woven into its traditional
